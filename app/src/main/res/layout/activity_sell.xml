@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".sell">
+
+    <EditText
+        android:backgroundTint="@color/blackText"
+        android:maxLines="1"
+        android:id="@+id/etBookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Book Name"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintText" />
+
+    <EditText
+        android:backgroundTint="@color/blackText"
+        android:maxLines="1"
+        android:textColor="@color/textColor"
+        android:id="@+id/etAuthor"
+        android:textColorHint="@color/hintText"
+        android:layout_gravity="center"
+        android:hint="Author Name"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:backgroundTint="@color/blackText"
+        android:maxLines="1"
+        android:textColor="@color/textColor"
+        android:id="@+id/etPrice"
+        android:textColorHint="@color/hintText"
+        android:hint="e.g. 100₹"
+        android:inputType="number"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:backgroundTint="@color/blackText"
+        android:maxLines="1"
+        android:textColor="@color/textColor"
+        android:id="@+id/etSellerName"
+        android:textColorHint="@color/hintText"
+        android:layout_gravity="center"
+        android:hint="@string/name"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:backgroundTint="@color/blackText"
+        android:maxLines="1"
+        android:textColor="@color/textColor"
+        android:id="@+id/etSellerEmail"
+        android:textColorHint="@color/hintText"
+        android:layout_gravity="center"
+        android:hint="@string/your_email_id"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:backgroundTint="@color/blackText"
+        android:maxLines="1"
+        android:layout_marginTop="15dp"
+        android:hint="@string/your_whatsapp_no"
+        android:textColor="@color/textColor"
+        android:id="@+id/etSellerNo"
+        android:textColorHint="@color/hintText"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnReq"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/request"
+        android:textColor="@color/textColor"
+        android:background="@drawable/btnback"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+        android:text="If you facing any kind of problem \nyou can contact me :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+        android:text="What'sApp :\n8851103682\n(Sanjeev)"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+        android:text="MAIL ID@ :\ntherealsanjeev0@gmail.com"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
