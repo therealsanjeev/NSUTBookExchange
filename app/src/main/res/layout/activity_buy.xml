@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context=".buy">
+    tools:context=".buy.buy">
+    <include layout="@layout/toolbar_layout"/>
 
     <EditText
         android:maxLines="1"

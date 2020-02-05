@@ -1,51 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawerMenu"
     android:background="@color/colorPrimary"
+    tools:openDrawer="end"
     android:orientation="horizontal">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/insta_font"
+            android:text="Welcome"
+            android:textColor="@color/textColor"
+            android:textSize="80sp" />
 
-    <TextView
-        android:layout_marginTop="30dp"
-        android:id="@+id/textView2"
+        <Button
+            android:layout_marginTop="300dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/btnBuy"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnback"
+            android:text="@string/buy_books"
+            android:textColor="@color/textColor"
+            android:textSize="25sp" />
+
+        <Button
+
+            android:id="@+id/btnSell"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btnback"
+            android:text="@string/sell_books"
+            android:textColor="@color/textColor"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:background="@color/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/insta_font"
-        android:text="Welcome"
-        android:textColor="@color/textColor"
-        android:textSize="80sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnBuy"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btnback"
-        android:text="@string/buy_books"
-        android:textColor="@color/textColor"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnSell"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/btnSell"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/btnback"
-        android:text="@string/sell_books"
-        android:textColor="@color/textColor"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuy" />
+        android:layout_height="match_parent"
+        android:background="@color/textColor"
+        app:itemTextColor="@color/blackText"
+        app:itemIconTint="@color/blackText"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"
+        android:id="@+id/navigationView"
+        app:headerLayout="@layout/header">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NSUTBookExChange</string>
     <string name="buy_books">BUY BOOKS</string>
-    <string name="sell_books">SEll BOOKS</string>
+    <string name="sell_books">SELL BOOKS</string>
     <string name="nsut_book_exchange">NSUT BOOK EXCHANGE</string>
     <string name="author_name">Author Name</string>
     <string name="book_name">Book Name</string>
@@ -12,4 +12,6 @@
     <string name="your_email_id">Email-ID</string>
     <string name="your_whatsapp_no">WhatsApp NO:</string>
     <string name="name">Name</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

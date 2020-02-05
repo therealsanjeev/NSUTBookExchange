@@ -12,8 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sell"></activity>
-        <activity android:name=".buy" />
+        <activity android:name=".aboutUs" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".sell.sell" android:parentActivityName=".MainActivity" />
+        <activity android:name=".buy.buy" android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

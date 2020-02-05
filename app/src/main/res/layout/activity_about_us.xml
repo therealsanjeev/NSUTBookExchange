@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".aboutUs">
+    <include layout="@layout/toolbar_layout"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+        android:text="If you facing any kind of problem \nor any kind of suggestions to improve our you can contact me :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+        android:text="What'sApp :\n8851103682\n(Sanjeev)"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+        android:text="MAIL ID@ :\ntherealsanjeev0@gmail.com"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/textColor"
+       android:text="\n\nTHANK YOU FOR SUPPORTING :)"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/happy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+
+</LinearLayout>

@@ -3,8 +3,8 @@
     <color name="colorPrimary">#324149</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colortoolBar">#3282b8</color>
     <color name="textColor">#f0efef</color>
     <color name="blackText">#333333</color>
     <color name="hintText">#dfdfdf</color>
+    <color name="toolBar">#333D42</color>
 </resources>

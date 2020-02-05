@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/profile" android:title="Profile" />
+        <item android:id="@+id/buy_menu" android:title="Buy Books" />
+        <item android:id="@+id/sell_menu" android:title="Sell Books" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/feedBack" android:title="FeedBack"/>
+        <item android:id="@+id/aboutUs" android:title="About Us" />
+        <item android:id="@+id/exit" android:title="Exit" />
+    </group>
+
+</menu>
