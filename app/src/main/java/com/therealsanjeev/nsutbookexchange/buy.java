@@ -26,16 +26,18 @@ public class buy extends AppCompatActivity {
 
     Button btnSearch;
     ArrayList<User> users;
-    ListView lvBooks;
+    ListView lvAllData;
+    BookAdapter bookAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy);
-        lvBooks=findViewById(R.id.lvBooks);
+
+        lvAllData=findViewById(R.id.lvAlldata);
         btnSearch=findViewById(R.id.btnSearch);
 
-        final bookAdapter adapter =new bookAdapter();
-        lvBooks.setAdapter(adapter);
+        bookAdapter = new BookAdapter();
+        lvAllData.setAdapter(bookAdapter);
 
         final DatabaseReference db= FirebaseDatabase.getInstance().getReference();
 
@@ -48,24 +50,18 @@ public class buy extends AppCompatActivity {
                     public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                         User user=dataSnapshot.getValue(User.class);
                         users.add(user);
-                        adapter.notifyDataSetChanged();
+                        bookAdapter.notifyDataSetChanged();
                     }
-
                     @Override
                     public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
                     }
-
                     @Override
                     public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
                     }
-
                     @Override
                     public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -73,18 +69,8 @@ public class buy extends AppCompatActivity {
                 });
             }
         });
-
-
-
-
-
     }
-
-
-
-
-
-    public class bookAdapter extends BaseAdapter {
+    class BookAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
@@ -104,12 +90,28 @@ public class buy extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view=getLayoutInflater().inflate(
+            View itemView=getLayoutInflater().inflate(
                     R.layout.book_listview,
                     parent,false
             );
 
-            return null;
+            TextView bookName=itemView.findViewById(R.id.tvBookName);
+            TextView authorName=itemView.findViewById(R.id.tvAuthorName);
+            TextView price=itemView.findViewById(R.id.tvPrice);
+            TextView sellerName=itemView.findViewById(R.id.tvSellerName);
+            TextView sellerNo=itemView.findViewById(R.id.tvSellerPhone);
+            TextView sellerEmail=itemView.findViewById(R.id.tvSellerEmail);
+
+            User us = (User) getItem(position);
+
+            bookName.setText(us.getBook());
+            authorName.setText(us.getAuthor());
+            price.setText(us.getPrice());
+            sellerName.setText(us.getSellerName());
+            sellerNo.setText(us.getSellerNo());
+            sellerEmail.setText(us.getSellerEmail());
+
+            return itemView;
         }
     }
 }
