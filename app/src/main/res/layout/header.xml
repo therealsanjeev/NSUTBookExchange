@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:padding="20dp"
-    android:background="@color/colorPrimary">
+    android:background="@drawable/navigation_bar">
     <ImageView
         android:src="@drawable/nsut"
         android:layout_width="75dp"
