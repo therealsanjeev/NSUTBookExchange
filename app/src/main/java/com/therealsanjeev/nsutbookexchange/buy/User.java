@@ -1,12 +1,13 @@
 package com.therealsanjeev.nsutbookexchange.buy;
 
 public class User {
-    public String author;
-    public String price;
-    public String sellerName;
-    public String sellerNo;
-    public String book;
-    public String sellerEmail;
+
+    private String author;
+    private String price;
+    private String sellerName;
+    private String sellerNo;
+    private String book;
+    private String sellerEmail;
 
     public String getBook() {
         return book;

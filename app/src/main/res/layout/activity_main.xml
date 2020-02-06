@@ -67,10 +67,10 @@
         android:layout_height="match_parent"
         android:background="@color/textColor"
         app:itemTextColor="@color/blackText"
-        app:itemIconTint="@color/blackText"
         android:layout_gravity="start"
         app:menu="@menu/navigation_menu"
         android:id="@+id/navigationView"
+        android:theme="@style/NavigationView"
         app:headerLayout="@layout/header">
 
 

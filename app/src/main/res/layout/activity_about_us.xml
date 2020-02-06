@@ -15,7 +15,7 @@
         android:textSize="30sp"
         android:fontFamily="@font/insta_font"
         android:textColor="@color/textColor"
-        android:text="If you facing any kind of problem \nor any kind of suggestions to improve our you can contact me :"
+        android:text="If you facing any kind of problem \nor you have kind of suggestions to improve our you can contact me :"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView

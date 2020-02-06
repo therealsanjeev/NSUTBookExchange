@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnBuy = findViewById(R.id.btnBuy);
         btnSell = findViewById(R.id.btnSell);
 
+        //bck button menu:
+
         //navigation Bar:
         toolbar=findViewById(R.id.toolBar);
         navigationView=findViewById(R.id.navigationView);
@@ -92,9 +94,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.exit:
                 finish();
                 System.exit(0);
+
+            case android.R.id.home:
+                this.finish();
             default:
                 break;
         }
-        return false;
+        return true;
     }
 }
