@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,16 +27,18 @@ import java.util.ArrayList;
 
 public class buy extends AppCompatActivity {
 
-    Button btnSearch;
     ArrayList<User> users;
     ListView lvAllData;
     BookAdapter bookAdapter;
     Toolbar toolbar;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy);
+        progressBar=findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
 
         users = new ArrayList<>();
 
@@ -47,8 +50,6 @@ public class buy extends AppCompatActivity {
 
         //list view & button id:
         lvAllData=findViewById(R.id.lvAlldata);
-        btnSearch=findViewById(R.id.btnSearch);
-
 
         //create adapter & set to listView :
         bookAdapter = new BookAdapter();
@@ -62,6 +63,8 @@ public class buy extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 users.add(user);
                 bookAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+
             }
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -79,12 +82,6 @@ public class buy extends AppCompatActivity {
             }
         });
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(buy.this,"Clicked Button",Toast.LENGTH_LONG).show();
-            }
-        });
     }
     class BookAdapter extends BaseAdapter {
 
@@ -120,10 +117,10 @@ public class buy extends AppCompatActivity {
 
             User us = getItem(position);
 
-            bookName.setText(us.getBook());
-            authorName.setText(us.getAuthor());
-            price.setText(us.getPrice());
-            sellerName.setText(us.getSellerName());
+            bookName.setText(us.getBook().toUpperCase());
+            authorName.setText(us.getAuthor().toUpperCase());
+            price.setText(us.getPrice()+"₹");
+            sellerName.setText(us.getSellerName().toUpperCase());
             sellerNo.setText(us.getSellerNo());
             sellerEmail.setText(us.getSellerEmail());
 

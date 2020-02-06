@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@color/white"
     tools:context=".sell.sell">
 
     <include layout="@layout/toolbar_layout"/>
 
     <EditText
-        android:backgroundTint="@color/blackText"
+        android:backgroundTint="@color/brown_grey"
         android:maxLines="1"
         android:singleLine="true"
         android:id="@+id/etBookName"
@@ -19,16 +19,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Book Name"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/hintText" />
+        android:textColor="@color/dark_grey"
+        android:textColorHint="@color/brown_grey" />
 
     <EditText
         android:singleLine="true"
-        android:backgroundTint="@color/blackText"
+        android:backgroundTint="@color/brown_grey"
         android:maxLines="1"
-        android:textColor="@color/textColor"
+        android:textColor="@color/dark_grey"
         android:id="@+id/etAuthor"
-        android:textColorHint="@color/hintText"
+        android:textColorHint="@color/brown_grey"
         android:layout_gravity="center"
         android:hint="Author Name"
         android:layout_marginTop="5dp"
@@ -36,22 +36,22 @@
         android:layout_height="wrap_content"/>
     <EditText
         android:singleLine="true"
-        android:backgroundTint="@color/blackText"
+        android:backgroundTint="@color/brown_grey"
         android:maxLines="1"
-        android:textColor="@color/textColor"
+        android:textColor="@color/dark_grey"
         android:id="@+id/etPrice"
-        android:textColorHint="@color/hintText"
+        android:textColorHint="@color/brown_grey"
         android:hint="e.g. 100₹"
         android:inputType="number"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
-        android:backgroundTint="@color/blackText"
+        android:backgroundTint="@color/brown_grey"
         android:singleLine="true"
-        android:textColor="@color/textColor"
+        android:textColor="@color/dark_grey"
         android:id="@+id/etSellerName"
-        android:textColorHint="@color/hintText"
+        android:textColorHint="@color/brown_grey"
         android:layout_gravity="center"
         android:hint="@string/name"
         android:layout_marginTop="5dp"
@@ -60,11 +60,11 @@
     <EditText
         android:inputType="textEmailAddress"
         android:singleLine="true"
-        android:backgroundTint="@color/blackText"
+        android:backgroundTint="@color/brown_grey"
         android:maxLines="1"
-        android:textColor="@color/textColor"
+        android:textColor="@color/dark_grey"
         android:id="@+id/etSellerEmail"
-        android:textColorHint="@color/hintText"
+        android:textColorHint="@color/brown_grey"
         android:layout_gravity="center"
         android:hint="@string/your_email_id"
         android:layout_marginTop="5dp"
@@ -73,15 +73,16 @@
 
     <EditText
         android:singleLine="true"
-        android:backgroundTint="@color/blackText"
+        android:backgroundTint="@color/brown_grey"
         android:maxLines="1"
         android:layout_marginTop="15dp"
         android:hint="@string/your_whatsapp_no"
-        android:textColor="@color/textColor"
+
+        android:textColor="@color/dark_grey"
         android:id="@+id/etSellerNo"
-        android:textColorHint="@color/hintText"
+        android:textColorHint="@color/brown_grey"
         android:layout_gravity="center"
-        android:inputType="number"
+        android:inputType="phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -92,7 +93,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="@string/request"
-        android:textColor="@color/textColor"
+        android:textColor="@color/white"
         android:background="@drawable/btnback"
         android:layout_width="150dp"
         android:layout_height="wrap_content"/>

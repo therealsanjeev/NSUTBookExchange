@@ -12,13 +12,13 @@
     <TextView
         android:layout_marginTop="5dp"
         android:textStyle="bold"
-        android:textColor="@color/textColor"
+        android:textColor="@color/white"
         android:text="NSUT BOOK EXCHANGE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
         android:text="Help Each Other"
-        android:textColor="@color/textColor"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

@@ -5,6 +5,8 @@
 
     android:layout_height="match_parent">
     <TextView
+        android:textColor="@color/dark_grey"
+
         android:id="@+id/tvBookName"
         android:layout_marginStart="10dp"
         android:textSize="24sp"
@@ -13,6 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:textColor="@color/dark_grey"
+
         android:id="@+id/tvAuthorName"
         android:text="@string/author_name"
         android:textSize="20sp"
@@ -20,39 +24,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:textColor="@color/dark_grey"
+
         android:id="@+id/tvPrice"
         android:text="@string/book_price"
         android:textSize="16sp"
         android:layout_marginStart="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/dark_grey"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Name:"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/dark_grey"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:text="WhatsApp No:"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/dark_grey"
+            android:textSize="13sp"
+            android:layout_gravity="right"
+            android:text="Email-Id:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
+            android:textColor="@color/dark_grey"
             android:id="@+id/tvSellerName"
             android:textSize="13sp"
+
             android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             android:text="Name"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"/>
         <TextView
+            android:textColor="@color/dark_grey"
             android:id="@+id/tvSellerPhone"
             android:textSize="13sp"
-            android:layout_marginLeft="50dp"
             android:text="Phone No"
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"/>
         <TextView
+            android:textColor="@color/dark_grey"
             android:id="@+id/tvSellerEmail"
             android:textSize="13sp"
-            android:layout_marginLeft="50dp"
             android:layout_gravity="right"
             android:text="Email id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+    <ImageView
+        android:src="@drawable/back_ground"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
 
 </LinearLayout>

@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolBarOthers"
         app:titleTextColor="@color/textColor"
-        android:background="@color/toolBar"
+        android:background="@drawable/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:popupTheme="@style/AppTheme.PopupOverlay"

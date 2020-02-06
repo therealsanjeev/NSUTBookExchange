@@ -73,9 +73,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()){
-            case R.id.profile:
-                Toast.makeText(this,"iT's Working",Toast.LENGTH_LONG).show();
-                break;
             case R.id.buy_menu:
                 Intent buyIntent=new Intent(MainActivity.this, buy.class);
                 startActivity(buyIntent);
@@ -83,9 +80,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.sell_menu:
                 final Intent sellIntent = new Intent(MainActivity.this, sell.class);
                 startActivity(sellIntent);
-                break;
-            case R.id.feedBack:
-                Toast.makeText(this,"feedBack iT's Working",Toast.LENGTH_LONG).show();
                 break;
             case R.id.aboutUs:
                 Intent aboutIntent=new Intent(MainActivity.this,aboutUs.class);
