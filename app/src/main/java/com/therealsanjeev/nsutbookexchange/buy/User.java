@@ -42,4 +42,6 @@ public class User {
         this.sellerNo = sellerNo;
     }
 
+    public User() {
+    }
 }
