@@ -66,13 +66,14 @@ public class sell extends AppCompatActivity {
                 if(book.length()!=0&&author.length()!=0&&price.length()!=0&&sellerName.length()!=0&&sellerNo.length()==10){
                     User user = new User(book,author,price,sellerName,sellerEmail,sellerNo);
                     db.child("user").push().setValue(user);
+                    //remove after submit :
                     etBookName.setText(null);
                     etAuthor.setText(null);
                     etPrice.setText(null);
                     etSellerName.setText(null);
                     etSellerNo.setText(null);
                     etSellerEmail.setText(null);
-                }else if(sellerNo.length()!=10){
+                }else if(book.length()!=0&&author.length()!=0&&price.length()!=0&&sellerName.length()!=0&&sellerNo.length()!=10){
                     Toast.makeText(sell.this,"Invalid Phone No.",Toast.LENGTH_LONG).show();
                 }
                 else{
@@ -80,7 +81,7 @@ public class sell extends AppCompatActivity {
                 }
 
 
-                //remove after submit :
+
 
 
 

@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -32,15 +34,37 @@ public class buy extends AppCompatActivity {
     BookAdapter bookAdapter;
     Toolbar toolbar;
     ProgressBar progressBar;
-
+    ImageButton searchBtn;
+    EditText searchText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy);
+        users = new ArrayList<>();
         progressBar=findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
+        searchBtn =findViewById(R.id.searchButton);
+        searchText=findViewById(R.id.searchEt);
 
-        users = new ArrayList<>();
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(buy.this,"Search Bar is Working :)",Toast.LENGTH_LONG).show();
+                String srcText=searchText.getText().toString();
+                ArrayList<User> srcList=new ArrayList<>();
+                for(User obj:users){
+                    if(obj.getBook().toLowerCase().contains(srcText.toLowerCase())){
+                        srcList.add(obj);
+                    }
+                }
+                BookAdapter adapter=new BookAdapter();
+                lvAllData.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+
 
         // tool Bar:
         toolbar=findViewById(R.id.toolBarOthers);
@@ -119,7 +143,7 @@ public class buy extends AppCompatActivity {
 
             bookName.setText(us.getBook().toUpperCase());
             authorName.setText(us.getAuthor().toUpperCase());
-            price.setText(us.getPrice()+"₹");
+            price.setText("₹ "+us.getPrice());
             sellerName.setText(us.getSellerName().toUpperCase());
             sellerNo.setText(us.getSellerNo());
             sellerEmail.setText(us.getSellerEmail());
