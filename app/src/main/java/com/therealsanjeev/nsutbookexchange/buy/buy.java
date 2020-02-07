@@ -45,6 +45,10 @@ public class buy extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         searchBtn =findViewById(R.id.searchButton);
         searchText=findViewById(R.id.searchEt);
+        lvAllData=findViewById(R.id.lvAlldata);
+
+        bookAdapter = new BookAdapter();
+        lvAllData.setAdapter(bookAdapter);
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,15 +56,16 @@ public class buy extends AppCompatActivity {
 
                 Toast.makeText(buy.this,"Search Bar is Working :)",Toast.LENGTH_LONG).show();
                 String srcText=searchText.getText().toString();
+
                 ArrayList<User> srcList=new ArrayList<>();
+                BookAdapter adapter=new BookAdapter();
                 for(User obj:users){
                     if(obj.getBook().toLowerCase().contains(srcText.toLowerCase())){
                         srcList.add(obj);
                     }
                 }
-                BookAdapter adapter=new BookAdapter();
                 lvAllData.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
+
             }
         });
 
@@ -72,12 +77,8 @@ public class buy extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //list view & button id:
-        lvAllData=findViewById(R.id.lvAlldata);
 
-        //create adapter & set to listView :
-        bookAdapter = new BookAdapter();
-        lvAllData.setAdapter(bookAdapter);
+
 
         //get FireBase root address :
         final DatabaseReference db= FirebaseDatabase.getInstance().getReference();
