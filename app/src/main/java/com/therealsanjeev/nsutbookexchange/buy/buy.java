@@ -41,24 +41,25 @@ public class buy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy);
         users = new ArrayList<>();
+
+        //id's
         progressBar=findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
         searchBtn =findViewById(R.id.searchButton);
         searchText=findViewById(R.id.searchEt);
         lvAllData=findViewById(R.id.lvAlldata);
 
-        bookAdapter = new BookAdapter();
+        bookAdapter = new BookAdapter(users);
         lvAllData.setAdapter(bookAdapter);
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(buy.this,"Search Bar is Working :)",Toast.LENGTH_LONG).show();
                 String srcText=searchText.getText().toString();
 
                 ArrayList<User> srcList=new ArrayList<>();
-                BookAdapter adapter=new BookAdapter();
+                BookAdapter adapter=new BookAdapter(srcList);
+
                 for(User obj:users){
                     if(obj.getBook().toLowerCase().contains(srcText.toLowerCase())){
                         srcList.add(obj);
@@ -110,17 +111,20 @@ public class buy extends AppCompatActivity {
     }
     class BookAdapter extends BaseAdapter {
 
+        ArrayList<User> list;
+
+        public BookAdapter(ArrayList<User> list) {
+            this.list = list;
+        }
+
         @Override
         public int getCount() {
-            if(users.isEmpty()){
-                return 0;
-            }
-            return users.size();
+            return list.size();
         }
 
         @Override
         public User getItem(int position){
-            return users.get(position);
+            return list.get(position);
         }
 
         @Override

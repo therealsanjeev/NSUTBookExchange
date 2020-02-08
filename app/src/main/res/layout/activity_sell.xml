@@ -58,7 +58,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
-        android:inputType="textEmailAddress"
         android:singleLine="true"
         android:backgroundTint="@color/brown_grey"
         android:maxLines="1"
@@ -69,6 +68,8 @@
         android:hint="@string/your_email_id"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
+        android:ems="10"
+        android:inputType="textEmailAddress"
         android:layout_height="wrap_content"/>
 
     <EditText

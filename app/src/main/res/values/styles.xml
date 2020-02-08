@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -10,7 +10,8 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="NavigationView">
-        <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
+        <item name="android:text" android:theme = "@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" app:iconTint="@color/white"/>
+        <item name="android:textColorPrimary">@color/white</item>
 
     </style>
     <style name="ProgressBar">

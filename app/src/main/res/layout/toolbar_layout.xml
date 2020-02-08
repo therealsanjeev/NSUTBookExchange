@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolBarOthers"
-        app:titleTextColor="@color/textColor"
+        app:titleTextColor="@color/white"
         android:background="@drawable/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
