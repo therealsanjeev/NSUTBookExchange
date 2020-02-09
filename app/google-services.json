@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "440277474118-5lpj8e4mlbbg69q91006pkgvattn105j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.therealsanjeev.nsutbookexchange",
+            "certificate_hash": "79d77996bc4226e9036781bd5aa19a40069dc3e1"
+          }
+        },
+        {
           "client_id": "440277474118-71pqbhdog9tlh44t7gbbv8t6hkpsplv4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
