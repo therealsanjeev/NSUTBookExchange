@@ -17,6 +17,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.therealsanjeev.nsutbookexchange.buy.buy;
+import com.therealsanjeev.nsutbookexchange.login.LoginActivity;
 import com.therealsanjeev.nsutbookexchange.login.RegisterActivity;
 import com.therealsanjeev.nsutbookexchange.sell.sell;
 
@@ -28,8 +29,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
     NavigationView navigationView;
-    FirebaseUser auth;
-    FirebaseAuth firebaseAuth;
+    FirebaseAuth auth;
+    FirebaseUser authUser;
 
     Button btnBuy;
     Button btnSell;
@@ -40,10 +41,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnBuy = findViewById(R.id.btnBuy);
         btnSell = findViewById(R.id.btnSell);
 
-        auth=FirebaseAuth.getInstance().getCurrentUser();
+        auth=FirebaseAuth.getInstance();
+        authUser=FirebaseAuth.getInstance().getCurrentUser();
 
-        if(auth==null){
-            startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+        if(authUser==null){
+            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
         }
 
         //bck button menu:
@@ -103,7 +105,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case android.R.id.home:
                 this.finish();
             case R.id.logOut:
-                firebaseAuth.signOut();
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+
 
             default:
                 break;
