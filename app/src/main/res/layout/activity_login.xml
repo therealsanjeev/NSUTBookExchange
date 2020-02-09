@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+
+
+
+    <EditText
+        android:id="@+id/etLoginEmail"
+        android:padding="10dp"
+        android:layout_marginTop="260dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Email Address" />
+    <EditText
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/etLoginPass"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="25sp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btnback"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvNotSignIn"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Not a member? Sign up!"
+        />
+
+    <ProgressBar
+        android:id="@+id/loginPro"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

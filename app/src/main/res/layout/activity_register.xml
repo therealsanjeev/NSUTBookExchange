@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+
+
+    <EditText
+        android:layout_marginTop="260dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/etRegEmail"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:textSize="25sp"
+         />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/etRegPass"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="25sp"
+         />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/etRegPassRepeat"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Repeat Password"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btnback"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvsignup"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Already Sign up!"
+        />
+
+</LinearLayout>

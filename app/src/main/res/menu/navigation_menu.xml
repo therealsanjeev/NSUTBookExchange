@@ -4,5 +4,6 @@
     <item android:id="@+id/buy_menu" android:title="Buy Books" />
     <item android:id="@+id/sell_menu" android:title="Sell Books" />
     <item android:id="@+id/aboutUs" android:title="About Us" />
+    <item android:id="@+id/logOut" android:title="Sign Out"/>
     <item android:id="@+id/exit" android:title="Exit" />
 </menu>
