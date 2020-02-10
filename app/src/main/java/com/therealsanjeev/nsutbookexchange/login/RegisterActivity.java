@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,15 +17,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.therealsanjeev.nsutbookexchange.MainActivity;
 import com.therealsanjeev.nsutbookexchange.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText etRegEmail,etRegPass,etRegPassRepeat;
+    EditText etRegEmail,etRegPass,etRegPassRepeat,etRegName,etRegPhone;
     Button btnSignUp;
     TextView tvSignUp;
     FirebaseAuth auth;
+    FirebaseUser authUser;
+    ProgressBar regPro;
 
 
     @Override
@@ -36,15 +40,19 @@ public class RegisterActivity extends AppCompatActivity {
         etRegEmail=findViewById(R.id.etRegEmail);
         etRegPass=findViewById(R.id.etRegPass);
         etRegPassRepeat=findViewById(R.id.etRegPassRepeat);
+        etRegName=findViewById(R.id.etRegName);
+        etRegPhone=findViewById(R.id.etRegPhone);
+        regPro=findViewById(R.id.regPro);
         btnSignUp=findViewById(R.id.btnSignUp);
 
         auth=FirebaseAuth.getInstance();
 
         if(auth.getCurrentUser()!=null){
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            fileList();
+            finish();
         }
 
+        regPro.setVisibility(View.GONE);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +75,8 @@ public class RegisterActivity extends AppCompatActivity {
                     etRegPassRepeat.setError("Password Not Match.");
                     return;
                 }
+
+                regPro.setVisibility(View.VISIBLE);
 
                 //register Process:
                 auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

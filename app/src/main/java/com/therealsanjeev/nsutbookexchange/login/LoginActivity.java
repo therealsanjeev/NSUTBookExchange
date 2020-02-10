@@ -40,6 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin=findViewById(R.id.btnLogin);
         tvLogin=findViewById(R.id.tvNotSignIn);
 
+        auth=FirebaseAuth.getInstance();
+        loginPro.setVisibility(View.GONE);
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
                             Toast.makeText(LoginActivity.this,"Error ! "+task.getException().getMessage(),Toast.LENGTH_LONG).show();
-
+                            loginPro.setVisibility(View.GONE);
                         }
                     }
                 });

@@ -7,16 +7,51 @@
     android:orientation="vertical"
     tools:context=".login.LoginActivity">
 
+    <TextView
+        android:layout_marginTop="100dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btnback"
+        android:text="NSUT Book Exchange"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <EditText
-        android:layout_marginTop="260dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/etRegName"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/etRegEmail"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:hint="Email Address"
-        android:textSize="25sp"
-         />
+        android:textSize="20sp"/>
+    <EditText
+        android:inputType="number"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/etRegPhone"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone No"
+        android:textSize="20sp"/>
+
 
     <EditText
         android:layout_marginTop="10dp"
@@ -26,7 +61,7 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textSize="25sp"
+        android:textSize="20sp"
          />
 
     <EditText
@@ -37,7 +72,7 @@
         android:hint="Repeat Password"
         android:layout_gravity="center_horizontal"
         android:inputType="textPassword"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnSignUp"
@@ -59,7 +94,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Already Sign up!"
-        />
+        android:text="Already Sign up!" />
+    <ProgressBar
+        android:layout_marginTop="5dp"
+        android:id="@+id/regPro"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
