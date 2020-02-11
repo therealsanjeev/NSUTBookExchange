@@ -9,95 +9,170 @@
     tools:context=".sell.sell">
 
     <include layout="@layout/toolbar_layout"/>
-
-    <EditText
-        android:backgroundTint="@color/brown_grey"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:id="@+id/etBookName"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:hint="Book Name"
-        android:textColor="@color/dark_grey"
-        android:textColorHint="@color/brown_grey" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="36.7dp"
+        android:background="@drawable/blue_border_rounded_cornwe">
 
-    <EditText
-        android:singleLine="true"
-        android:backgroundTint="@color/brown_grey"
-        android:maxLines="1"
-        android:textColor="@color/dark_grey"
-        android:id="@+id/etAuthor"
-        android:textColorHint="@color/brown_grey"
-        android:layout_gravity="center"
-        android:hint="Author Name"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:singleLine="true"
-        android:backgroundTint="@color/brown_grey"
-        android:maxLines="1"
-        android:textColor="@color/dark_grey"
-        android:id="@+id/etPrice"
-        android:textColorHint="@color/brown_grey"
-        android:hint="e.g. 100₹"
-        android:inputType="number"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:backgroundTint="@color/brown_grey"
-        android:singleLine="true"
-        android:textColor="@color/dark_grey"
-        android:id="@+id/etSellerName"
-        android:textColorHint="@color/brown_grey"
-        android:layout_gravity="center"
-        android:hint="@string/name"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:singleLine="true"
-        android:backgroundTint="@color/brown_grey"
-        android:maxLines="1"
-        android:textColor="@color/dark_grey"
-        android:id="@+id/etSellerEmail"
-        android:textColorHint="@color/brown_grey"
-        android:layout_gravity="center"
-        android:hint="@string/your_email_id"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_height="wrap_content"/>
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/etBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/book_name"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:textColorHint="@color/brown_grey"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
 
-    <EditText
-        android:singleLine="true"
-        android:backgroundTint="@color/brown_grey"
-        android:maxLines="1"
-        android:layout_marginTop="15dp"
-        android:hint="@string/your_whatsapp_no"
-
-        android:textColor="@color/dark_grey"
-        android:id="@+id/etSellerNo"
-        android:textColorHint="@color/brown_grey"
-        android:layout_gravity="center"
-        android:inputType="phone"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/etAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/author_name"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:textColorHint="@color/brown_grey"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="e.g. 100₹"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:textColorHint="@color/brown_grey"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/etSellerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/name"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:singleLine="true"
+            android:textColorHint="@color/brown_grey"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/etSellerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/your_email_id"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingLeft="17dp"
+            android:textColorHint="@color/brown_grey"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe">
+
+        <!-- INPUT -->
+        <EditText
+            android:id="@+id/etSellerNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/your_whatsapp_no"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingLeft="17dp"
+            android:textColorHint="@color/brown_grey"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/btnReq"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="@string/request"
-        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btnback"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"/>
+        android:text="@string/request"
+        android:textColor="#ffff" />
 
 
 </LinearLayout>

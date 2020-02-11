@@ -4,9 +4,9 @@
         <shape android:shape="rectangle">
             <gradient
                 android:angle="360"
-                android:endColor="@color/colorPrimary"
+                android:endColor="@color/toolBar"
                 android:startColor="@color/toolBar" />
-            <corners android:radius="10dp" />
+            <corners android:radius="80dp" />
 
         </shape>
     </item>
