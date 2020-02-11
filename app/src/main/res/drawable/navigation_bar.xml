@@ -5,7 +5,7 @@
             <gradient
                 android:angle="90"
                 android:endColor="@color/toolBar"
-                android:startColor="@color/colorPrimary" />
+                android:startColor="@color/toolBar" />
             <corners android:radius="0dp" />
 
         </shape>
