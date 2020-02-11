@@ -16,7 +16,7 @@
         <activity android:name=".login.RegisterActivity">
             
         </activity>
-        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".login.LoginActivity" android:noHistory="true" />
         <activity
             android:name=".aboutUs"
             android:parentActivityName=".MainActivity" />
