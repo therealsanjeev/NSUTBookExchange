@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         auth=FirebaseAuth.getInstance();
         authUser=FirebaseAuth.getInstance().getCurrentUser();
 
-        while(authUser==null){
+        if(authUser==null){
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            finish();
         }
 
         //bck button menu:
