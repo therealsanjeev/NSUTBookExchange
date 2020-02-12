@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         auth=FirebaseAuth.getInstance();
         authUser=FirebaseAuth.getInstance().getCurrentUser();
 
-        if(authUser==null){
+        while(authUser==null){
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
         }
 

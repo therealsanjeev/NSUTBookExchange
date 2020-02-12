@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:hint="@string/name"
+            android:textColorHint="@color/brown_grey"
             android:singleLine="true"
             android:inputType="textEmailAddress"
             android:maxLines="1"
@@ -60,6 +61,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:hint="@string/prompt_email"
+            android:textColorHint="@color/brown_grey"
+
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:singleLine="true"
@@ -86,6 +89,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:hint="@string/your_whatsapp_no"
+            android:textColorHint="@color/brown_grey"
+
             android:inputType="phone"
             android:maxLines="1"
             android:paddingLeft="17dp"
@@ -117,6 +122,8 @@
             android:inputType="textPassword"
             android:maxLines="1"
             android:singleLine="true"
+            android:textColorHint="@color/brown_grey"
+
             android:paddingLeft="17dp"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
@@ -141,6 +148,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:hint="@string/prompt_password"
+            android:textColorHint="@color/brown_grey"
+
             android:inputType="textPassword"
             android:singleLine="true"
             android:maxLines="1"
