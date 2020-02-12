@@ -121,7 +121,6 @@
             android:text=" Register"
             android:textColor="#ff4c60"
             android:textSize="20dp"
-            android:onClick=""
             android:layout_marginTop="10sp"
             />
 
