@@ -148,7 +148,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:hint="@string/prompt_password"
+            android:hint="Confirm Password"
             android:textColorHint="@color/brown_grey"
 
             android:inputType="textPassword"
