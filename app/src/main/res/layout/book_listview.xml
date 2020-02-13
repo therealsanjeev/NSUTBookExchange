@@ -1,99 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:orientation="vertical"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:textColor="@color/dark_grey"
-        android:id="@+id/tvBookName"
-        android:layout_marginStart="10dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/book_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:textColor="@color/dark_grey"
 
-        android:id="@+id/tvAuthorName"
-        android:text="@string/author_name"
-        android:textSize="20sp"
-        android:layout_marginStart="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:textColor="@color/dark_grey"
-
-        android:id="@+id/tvPrice"
-        android:text="@string/book_price"
-        android:textSize="16sp"
-        android:layout_marginStart="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textColor="@color/dark_grey"
-            android:textSize="13sp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
-            android:text="Name:"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:textColor="@color/dark_grey"
-            android:textSize="13sp"
-            android:layout_gravity="center"
-            android:text="WhatsApp No:"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:textColor="@color/dark_grey"
-            android:textSize="13sp"
-            android:layout_gravity="right"
-            android:text="Email-Id:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="4dp"
+        android:padding="5dp"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
-    <LinearLayout
+            <TextView
+                android:textColor="@color/dark_grey"
+                android:id="@+id/tvBookName"
+                android:layout_marginStart="10dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:text="@string/book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TableRow
+                android:id="@+id/hr"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/brown_grey"/>
+            <TextView
+                android:textColor="@color/dark_grey"
 
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textColor="@color/dark_grey"
-            android:id="@+id/tvSellerName"
-            android:textSize="13sp"
+                android:id="@+id/tvAuthorName"
+                android:text="@string/author_name"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/dark_grey"
 
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="left"
-            android:text="Name"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:textColor="@color/dark_grey"
-            android:id="@+id/tvSellerPhone"
-            android:textSize="13sp"
-            android:text="Phone No"
-            android:layout_gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:textColor="@color/dark_grey"
-            android:id="@+id/tvSellerEmail"
-            android:textSize="13sp"
-            android:layout_gravity="right"
-            android:text="Email id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <ImageView
-        android:src="@drawable/back_ground"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+                android:id="@+id/tvPrice"
+                android:text="@string/book_price"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/dark_grey"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Name:"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/dark_grey"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:text="WhatsApp No:"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/dark_grey"
+                    android:textSize="13sp"
+                    android:layout_gravity="right"
+                    android:text="Email:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/dark_grey"
+                    android:id="@+id/tvSellerName"
+                    android:textSize="13sp"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="left"
+                    android:text="Name"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/dark_grey"
+                    android:id="@+id/tvSellerPhone"
+                    android:textSize="13sp"
+                    android:text="Phone No"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/dark_grey"
+                    android:id="@+id/tvSellerEmail"
+                    android:textSize="13sp"
+                    android:layout_gravity="right"
+                    android:text="Email id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>
