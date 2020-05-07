@@ -11,5 +11,4 @@ Exchange Books in my college Netaji Subhas University of Technology, formerly Ne
 | <img src="https://raw.githubusercontent.com/therealsanjeev/NSUTBookExchange/master/Photos/Screenshot_20200214-005447.png" width="250"> <img src="https://raw.githubusercontent.com/therealsanjeev/NSUTBookExchange/master/Photos/Screenshot_20200214-005442.png" width="250"> 
 <img src="https://raw.githubusercontent.com/therealsanjeev/NSUTBookExchange/master/Photos/Screenshot_20200214-005419.png" width="250"> 
 <img src="https://raw.githubusercontent.com/therealsanjeev/NSUTBookExchange/master/Photos/Screenshot_20200214-005424.png" width="250"> 
-<img src="https://raw.githubusercontent.com/therealsanjeev/NSUTBookExchange/master/Photos/Screenshot_20200214-005429.png" width="250"> 
 <img src="https://raw.githubusercontent.com/therealsanjeev/NSUTBookExchange/master/Photos/Screenshot_20200214-005435.png" width="250"> |
