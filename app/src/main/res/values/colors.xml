@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <color name="colorPrimary">#253A4B</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#131313</color>
+    <color name="colorPrimaryDark">#131313</color>
+    <color name="colorAccent">#3CDA85</color>
     <color name="toolBar">#F23B5F</color>
     <color name="white">#ffffff</color>
     <color name="brown_grey">#999999</color>
     <color name="dark_grey">#222222</color>
     <color name="blackText">#222222</color>
     <color name="white_transparency">#b9ffffff</color>
+    <color name="colorCardViewBackground">#E9EAED</color>
+    <color name="colorTitle">#313131</color>
+    <color name="colorWhite">#ffffff</color>
+
+
 
 
 </resources>

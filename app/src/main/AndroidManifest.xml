@@ -4,7 +4,8 @@
     package="com.therealsanjeev.nsutbookexchange">
 
     <dist:module dist:instant="true" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".homepage">
 
-        <activity android:name=".login.RegisterActivity"
-            android:noHistory="true"/>
-        <activity android:name=".login.LoginActivity"
+        </activity>
+        <activity
+            android:name=".login.RegisterActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".login.LoginActivity"
             android:noHistory="true" />
         <activity
             android:name=".aboutUs"

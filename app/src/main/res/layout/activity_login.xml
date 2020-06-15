@@ -1,136 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/colorWhite"
+    android:fillViewport="true"
     tools:context=".login.LoginActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello There!"
-        android:textColor="@color/colorPrimary"
-        android:textSize="50dp"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="40dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NSUT Book Exchange"
-        android:textColor="@color/toolBar"
-        android:textSize="20dp"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="40dp"
-        />
-
-    <ImageView
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/login_photo"
-        android:layout_width="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_height="150dp"/>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40sp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+        android:layout_height="match_parent">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etLoginEmail"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/prompt_email"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/brown_grey"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/nice_to_see_you_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Nice to see you!"
+                android:textColor="@color/colorTitle"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/login_input_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nice_to_see_you_text_view"
+                android:layout_marginTop="30dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/email_input_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@null"
+                            android:hint="Email"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="15dp"
+                            tools:ignore="TextFields" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/password_input_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/email_input_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@null"
+                            android:hint="Password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="15dp"
+                            tools:ignore="TextFields" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/forgot_password_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/password_input_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/login_button_card_view"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/login_input_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/colorCardViewBackground"
+                app:cardCornerRadius="22.5dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:background="@color/colorAccent"
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:focusable="false">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="Login"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etLoginPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/prompt_password"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:inputType="textPassword"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/brown_grey"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btnback"
-        android:text="Sign In"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="You are not a member?"
-            android:layout_marginLeft="40dp"
-            android:textColor="#446391"
-            android:textSize="20dp"
-            android:layout_marginTop="10sp"
-            />
-        <TextView
-            android:id="@+id/tvNotSignIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Register"
-            android:textColor="#ff4c60"
-            android:textSize="20dp"
-            android:layout_marginTop="10sp"
-            />
-
-    </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/loginPro"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>
