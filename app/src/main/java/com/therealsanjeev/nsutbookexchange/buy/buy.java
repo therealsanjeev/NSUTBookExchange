@@ -36,6 +36,7 @@ public class buy extends AppCompatActivity {
     ProgressBar progressBar;
     ImageButton searchBtn;
     EditText searchText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

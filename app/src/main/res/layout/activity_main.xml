@@ -10,8 +10,6 @@
     android:orientation="horizontal">
 
 
-
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -45,9 +43,7 @@
                 android:textColor="#446391"
                 android:textSize="20dp"
                 />
-
         </LinearLayout>
-
 
 
         <LinearLayout
