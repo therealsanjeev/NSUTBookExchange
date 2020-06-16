@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.therealsanjeev.nsutbookexchange.R;
@@ -44,6 +46,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         ((ViewHolder)holder).sellerName.setText(users.get(position).getSellerName());
         ((ViewHolder)holder).sellerEmail.setText(users.get(position).getSellerEmail());
         ((ViewHolder)holder).sellerNo.setText(users.get(position).getSellerNo());
+        setOnClick(((ViewHolder)holder).cardView,position);
+    }
+
+    private void setOnClick(CardView cardView, final int position) {
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"Click: "+position,Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override

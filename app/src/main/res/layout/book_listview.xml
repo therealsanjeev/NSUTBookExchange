@@ -23,6 +23,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:textAllCaps="true"
                 android:textColor="@color/colorPrimary"
                 android:id="@+id/tvBookName"
                 android:layout_marginStart="10dp"
