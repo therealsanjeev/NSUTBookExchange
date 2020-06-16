@@ -10,7 +10,7 @@ public class aboutUs extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        setContentView(R.layout.about_us);
         toolbar=findViewById(R.id.toolBarOthers);
         toolbar.setTitle("About Us");
         setSupportActionBar(toolbar);

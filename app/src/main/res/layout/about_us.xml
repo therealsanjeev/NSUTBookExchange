@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/colorWhite"
     tools:context=".aboutUs">
     <include layout="@layout/toolbar_layout"/>
 
@@ -14,7 +14,7 @@
         android:layout_marginTop="15dp"
         android:textSize="30sp"
         android:fontFamily="@font/insta_font"
-        android:textColor="@color/dark_grey"
+        android:textColor="@color/colorPrimary"
         android:text="If you facing any kind of problem \n or you have kind of suggestions to improve our app\n\n You can contact me :"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -24,7 +24,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/insta_font"
-        android:textColor="@color/dark_grey"
+        android:textColor="@color/colorPrimary"
         android:text="MAIL ID@ :\ntherealsanjeev0@gmail.com\n[Sanjeev]"
         android:textSize="30sp"
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/insta_font"
-        android:textColor="@color/dark_grey"
+        android:textColor="@color/colorPrimary"
        android:text="\n\nTHANK YOU FOR SUPPORTING :)"
         android:textSize="30sp"
         android:layout_width="match_parent"

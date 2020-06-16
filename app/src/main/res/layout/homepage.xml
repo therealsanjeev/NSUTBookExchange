@@ -88,7 +88,7 @@
             android:layout_marginBottom="15dp"
             android:ellipsize="end"
             android:lines="1"
-            android:text="Your are not a member? Register."
+            android:text="@string/you_are_not_a_member_register"
             android:textColor="@color/colorTitle"
             android:textSize="15dp" />
 

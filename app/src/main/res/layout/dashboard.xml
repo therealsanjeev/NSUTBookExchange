@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerMenu"
-    android:background="@drawable/bg"
+    android:background="@color/colorWhite"
     tools:openDrawer="end"
     android:orientation="horizontal">
 
@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Welcome!"
-                android:textColor="#ffff"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="50dp"
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginTop="70dp"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nice to see you again!"
                 android:layout_marginLeft="40dp"
-                android:textColor="#446391"
+                android:textColor="@color/colorAccent"
                 android:textSize="20dp"
                 />
         </LinearLayout>
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/btnback"
                 android:text="@string/buy_books"
-                android:textColor="#ffff"  />
+                android:textColor="@color/colorWhite"  />
 
             <Button
                 android:layout_gravity="center_horizontal"
@@ -80,7 +80,7 @@
         android:layout_height="match_parent">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"
-            app:titleTextColor="@color/white"
+            app:titleTextColor="@color/colorTitle"
             android:background="@drawable/navigation_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -90,8 +90,8 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        app:itemTextColor="@color/dark_grey"
+        android:background="@color/colorWhite"
+        app:itemTextColor="@color/colorPrimaryDark"
         android:layout_gravity="start"
         app:menu="@menu/navigation_menu"
         android:id="@+id/navigationView"

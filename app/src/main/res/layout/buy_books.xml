@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/colorWhite"
     tools:context=".buy.buy">
     <include layout="@layout/toolbar_layout"/>
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:textColor="@color/dark_grey"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/searchEt"
             android:padding="10dp"
             android:layout_margin="5dp"
@@ -26,7 +26,7 @@
             android:layout_height="40dp"
             android:layout_weight="4"
             android:hint="Search Your Book"
-            android:textColorHint="@color/brown_grey"
+            android:textColorHint="@color/colorTitle"
             android:textSize="16sp" />
 
         <ImageButton
@@ -37,9 +37,9 @@
             android:layout_marginRight="15dp"
             android:id="@+id/searchButton"
             android:background="@drawable/search_button"
-            android:backgroundTint="@color/toolBar"
+            android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/baseline_search_black_18dp"
-            android:tint="@color/white" />
+            android:tint="@color/colorWhite" />
 
     </LinearLayout>
 
@@ -51,6 +51,11 @@
         android:layout_gravity="center_horizontal"
         android:indeterminate="true"
         android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_height="match_parent"/>
 
     <ListView
         android:id="@+id/lvAlldata"

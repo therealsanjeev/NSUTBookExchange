@@ -3,6 +3,6 @@
 
     <style name="NavigationView">
         <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
-        <item name="android:outlineAmbientShadowColor">@color/blackText</item>
+        <item name="android:outlineAmbientShadowColor">@color/colorPrimaryDark</item>
     </style>
 </resources>

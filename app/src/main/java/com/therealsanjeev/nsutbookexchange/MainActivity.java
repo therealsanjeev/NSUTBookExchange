@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,10 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.therealsanjeev.nsutbookexchange.buy.buy;
 import com.therealsanjeev.nsutbookexchange.login.LoginActivity;
-import com.therealsanjeev.nsutbookexchange.login.RegisterActivity;
 import com.therealsanjeev.nsutbookexchange.sell.sell;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -37,10 +35,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Button btnSell;
 
     private boolean backAlreadyPressed = false;
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.dashboard);
         btnBuy = findViewById(R.id.btnBuy);
         btnSell = findViewById(R.id.btnSell);
 
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         authUser=FirebaseAuth.getInstance().getCurrentUser();
 
         if(authUser==null){
-            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+            startActivity(new Intent(getApplicationContext(),homepage.class));
             finish();
         }
 

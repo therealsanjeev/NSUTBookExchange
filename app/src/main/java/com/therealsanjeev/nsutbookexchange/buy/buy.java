@@ -4,19 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +23,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.therealsanjeev.nsutbookexchange.R;
+import com.therealsanjeev.nsutbookexchange.buy.adapter.RecyclerViewAdapter;
+import com.therealsanjeev.nsutbookexchange.buy.model.User;
 
 import java.util.ArrayList;
 
@@ -40,47 +41,30 @@ public class buy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buy);
-        users = new ArrayList<>();
+        setContentView(R.layout.buy_books);
 
-        //id's
-        progressBar=findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.VISIBLE);
-        searchBtn =findViewById(R.id.searchButton);
-        searchText=findViewById(R.id.searchEt);
-        lvAllData=findViewById(R.id.lvAlldata);
+        setType();
+        searchBook();
+
 
         bookAdapter = new BookAdapter(users);
         lvAllData.setAdapter(bookAdapter);
+        fireBaseCall();
 
-        searchBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String srcText=searchText.getText().toString();
+    }
 
-                ArrayList<User> srcList=new ArrayList<>();
-                BookAdapter adapter=new BookAdapter(srcList);
+    private void setAdapter() {
 
-                for(User obj:users){
-                    if(obj.getBook().toLowerCase().contains(srcText.toLowerCase())){
-                        srcList.add(obj);
-                    }
-                }
-                lvAllData.setAdapter(adapter);
+        RecyclerView recyclerView=findViewById(R.id.recyclerView);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
-            }
-        });
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(users,buy.this);
+        recyclerView.setAdapter(adapter);
 
+    }
 
-
-        // tool Bar:
-        toolbar=findViewById(R.id.toolBarOthers);
-        toolbar.setTitle("Buy Books");
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
+    private void fireBaseCall() {
 
         //get FireBase root address :
         final DatabaseReference db= FirebaseDatabase.getInstance().getReference();
@@ -89,7 +73,8 @@ public class buy extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 User user = dataSnapshot.getValue(User.class);
                 users.add(user);
-                bookAdapter.notifyDataSetChanged();
+                setAdapter();
+//                bookAdapter.notifyDataSetChanged();
                 progressBar.setVisibility(View.GONE);
 
             }
@@ -110,6 +95,45 @@ public class buy extends AppCompatActivity {
         });
 
     }
+
+    private void searchBook() {
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String srcText=searchText.getText().toString();
+
+                ArrayList<User> srcList=new ArrayList<>();
+                BookAdapter adapter=new BookAdapter(srcList);
+
+                for(User obj:users){
+                    if(obj.getBook().toLowerCase().contains(srcText.toLowerCase())){
+                        srcList.add(obj);
+                    }
+                }
+                lvAllData.setAdapter(adapter);
+
+            }
+        });
+    }
+
+    private void setType() {
+        users = new ArrayList<>();
+        //id's
+        progressBar=findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
+        searchBtn =findViewById(R.id.searchButton);
+        searchText=findViewById(R.id.searchEt);
+        lvAllData=findViewById(R.id.lvAlldata);
+
+        // tool Bar:
+        toolbar=findViewById(R.id.toolBarOthers);
+        toolbar.setTitle("Buy Books");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+    }
+
+
     class BookAdapter extends BaseAdapter {
 
         ArrayList<User> list;

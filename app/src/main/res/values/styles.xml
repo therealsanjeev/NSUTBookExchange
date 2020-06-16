@@ -11,7 +11,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="NavigationView">
         <item name="android:text" android:theme = "@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" app:iconTint="@color/white"/>
-        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
 
     </style>
     <style name="ProgressBar">

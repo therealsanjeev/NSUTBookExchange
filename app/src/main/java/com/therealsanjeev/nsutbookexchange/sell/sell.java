@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.therealsanjeev.nsutbookexchange.R;
-import com.therealsanjeev.nsutbookexchange.buy.User;
+import com.therealsanjeev.nsutbookexchange.buy.model.User;
 
 public class sell extends AppCompatActivity {
 
@@ -32,7 +32,7 @@ public class sell extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sell);
+        setContentView(R.layout.sell_books);
 
         toolbar=findViewById(R.id.toolBarOthers);
         toolbar.setTitle("Sell Books");

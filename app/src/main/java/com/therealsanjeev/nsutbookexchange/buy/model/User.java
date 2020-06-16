@@ -1,4 +1,4 @@
-package com.therealsanjeev.nsutbookexchange.buy;
+package com.therealsanjeev.nsutbookexchange.buy.model;
 
 public class User {
 
