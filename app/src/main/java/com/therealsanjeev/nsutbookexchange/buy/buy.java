@@ -44,12 +44,8 @@ public class buy extends AppCompatActivity {
         setContentView(R.layout.buy_books);
 
         setType();
-        searchBook();
-
-
-        bookAdapter = new BookAdapter(users);
-        lvAllData.setAdapter(bookAdapter);
         fireBaseCall();
+        searchBook();
 
     }
 

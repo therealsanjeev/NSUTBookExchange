@@ -38,7 +38,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+        ((ViewHolder)holder).bookName.setText(users.get(position).getBook());
+        ((ViewHolder)holder).authorName.setText(users.get(position).getAuthor());
+        ((ViewHolder)holder).price.setText(users.get(position).getPrice());
+        ((ViewHolder)holder).sellerName.setText(users.get(position).getSellerName());
+        ((ViewHolder)holder).sellerEmail.setText(users.get(position).getSellerEmail());
+        ((ViewHolder)holder).sellerNo.setText(users.get(position).getSellerNo());
     }
 
     @Override
