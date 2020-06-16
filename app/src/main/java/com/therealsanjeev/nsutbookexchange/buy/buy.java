@@ -31,8 +31,6 @@ import java.util.ArrayList;
 public class buy extends AppCompatActivity {
 
     ArrayList<User> users;
-    ListView lvAllData;
-    BookAdapter bookAdapter;
     Toolbar toolbar;
     ProgressBar progressBar;
     ImageButton searchBtn;
@@ -99,14 +97,18 @@ public class buy extends AppCompatActivity {
                 String srcText=searchText.getText().toString();
 
                 ArrayList<User> srcList=new ArrayList<>();
-                BookAdapter adapter=new BookAdapter(srcList);
+
+                RecyclerView recyclerView=findViewById(R.id.recyclerView);
+                LinearLayoutManager linearLayoutManager=new LinearLayoutManager(buy.this);
+                recyclerView.setLayoutManager(linearLayoutManager);
 
                 for(User obj:users){
                     if(obj.getBook().toLowerCase().contains(srcText.toLowerCase())){
                         srcList.add(obj);
                     }
                 }
-                lvAllData.setAdapter(adapter);
+                RecyclerViewAdapter adapter = new RecyclerViewAdapter(srcList,buy.this);
+                recyclerView.setAdapter(adapter);
 
             }
         });
@@ -119,7 +121,6 @@ public class buy extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         searchBtn =findViewById(R.id.searchButton);
         searchText=findViewById(R.id.searchEt);
-        lvAllData=findViewById(R.id.lvAlldata);
 
         // tool Bar:
         toolbar=findViewById(R.id.toolBarOthers);
