@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            app:titleMarginStart="40dp"
+            app:logo="@drawable/navigation_bar"
             android:id="@+id/toolBar"
             android:elevation="4dp"
             app:titleTextColor="@color/text_color"
