@@ -8,7 +8,10 @@
     <color name="white_transparency">#b9ffffff</color>
     <color name="colorCardViewBackground">#E9EAED</color>
     <color name="colorTitle">#313131</color>
+    <color name="black">#393840</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="divider">#E9E9E9</color>
+    <color name="text_color">#2E374D</color>
 
 
 

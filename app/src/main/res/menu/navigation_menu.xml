@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/buy_menu" android:title="Buy Books" />
-    <item android:id="@+id/sell_menu" android:title="Sell Books" />
-    <item android:id="@+id/aboutUs" android:title="About Us" />
-    <item android:id="@+id/logOut" android:title="Sign Out"/>
-    <item android:id="@+id/exit" android:title="Exit" />
+    <item android:id="@+id/buy_menu"
+        android:title="Buy Books"
+        android:icon="@drawable/ic_baseline_book_24"
+        />
+    <item android:id="@+id/sell_menu"
+        android:title="Sell Books"
+        android:icon="@drawable/ic_baseline_book_24"
+        />
+    <item android:id="@+id/aboutUs"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="About Us" />
+    <item android:id="@+id/logOut"
+        android:title="Sign Out"
+        android:icon="@drawable/ic_login_black_24dp"/>
+    <item android:id="@+id/exit"
+        android:title="Exit"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"/>
 </menu>

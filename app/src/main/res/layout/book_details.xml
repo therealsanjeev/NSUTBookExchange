@@ -6,4 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".buy.BookDetails">
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
