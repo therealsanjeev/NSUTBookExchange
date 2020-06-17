@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     private void loginButtonStyle (){
-        if (etLoginPass.getText().length() > 0 && etLoginEmail.getText().length() > 0) {
+        if (etLoginPass.getText().length() > 8 && etLoginEmail.getText().length() > 5) {
             if (!btnLogin.isFocusable()) {
                 btnLogin.setFocusable(true);
                 btnLogin.setClickable(true);
