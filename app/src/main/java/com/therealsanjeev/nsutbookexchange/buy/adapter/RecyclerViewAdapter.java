@@ -1,6 +1,7 @@
 package com.therealsanjeev.nsutbookexchange.buy.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.therealsanjeev.nsutbookexchange.R;
+import com.therealsanjeev.nsutbookexchange.buy.BookDetails;
+import com.therealsanjeev.nsutbookexchange.buy.buy;
 import com.therealsanjeev.nsutbookexchange.buy.model.User;
 import com.therealsanjeev.nsutbookexchange.buy.viewholder.ViewHolder;
 
@@ -53,7 +56,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Click: "+position,Toast.LENGTH_LONG).show();
+                Intent i=  new Intent(context, BookDetails.class);
+                i.putExtra("user", String.valueOf(users.get(position)));
+                context.startActivity(i);
             }
         });
     }

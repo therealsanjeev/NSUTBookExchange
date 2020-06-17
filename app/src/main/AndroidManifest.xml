@@ -20,8 +20,11 @@
             android:name=".login.RegisterActivity"
             android:noHistory="true" />
         <activity
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
             android:name=".login.LoginActivity"
-            android:noHistory="true" />
+            android:noHistory="true"
+            />
         <activity
             android:name=".aboutUs"
             android:parentActivityName=".MainActivity" />
