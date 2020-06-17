@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:id="@+id/book" >
     <item android:id="@+id/buy_menu"
         android:title="Buy Books"
         android:icon="@drawable/ic_baseline_book_24"
@@ -9,6 +10,10 @@
         android:title="Sell Books"
         android:icon="@drawable/ic_baseline_book_24"
         />
+    </group>
+
+    <group android:id="@+id/about">
+
     <item android:id="@+id/aboutUs"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="About Us" />
@@ -18,4 +23,5 @@
     <item android:id="@+id/exit"
         android:title="Exit"
         android:icon="@drawable/ic_baseline_exit_to_app_24"/>
+    </group>
 </menu>

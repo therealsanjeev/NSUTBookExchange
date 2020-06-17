@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
@@ -12,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
     NavigationView navigationView;
+
     FirebaseAuth auth;
     FirebaseUser authUser;
 
@@ -37,11 +40,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Button btnSell;
 
     private boolean backAlreadyPressed = false;
+
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
+
         btnBuy = findViewById(R.id.btnBuy);
         btnSell = findViewById(R.id.btnSell);
 
@@ -53,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             finish();
         }
 
-        //bck button menu:
 
         //navigation Bar:
         toolbar=findViewById(R.id.toolBar);
@@ -63,11 +67,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
 
+
+
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
 
 
         final Intent sellIntent = new Intent(MainActivity.this, buy.class);
@@ -135,11 +143,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             default:
                 break;
         }
+        closeDrawer();
         return true;
     }
 
+    public void closeDrawer(){
+        drawerLayout.closeDrawer(GravityCompat.START);
+    }
+    public void openDrawer(){
+        drawerLayout.openDrawer(GravityCompat.START);
+    }
+
+    @Override
     public void onBackPressed() {
 
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            closeDrawer();
+        }
+        super.onBackPressed();
         if (backAlreadyPressed) {
             // close the application
             Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -148,6 +169,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
             return;
         }
+
         // first back press should set the variable to true & show a Toast to press again to close application
         this.backAlreadyPressed = true;
         Toast.makeText(this,"Press once more to exit", Toast.LENGTH_SHORT).show();

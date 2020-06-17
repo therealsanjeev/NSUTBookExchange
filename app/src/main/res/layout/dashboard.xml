@@ -14,7 +14,6 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            app:logo="@drawable/navigation_bar"
             android:id="@+id/toolBar"
             android:elevation="4dp"
             app:titleTextColor="@color/text_color"
@@ -24,6 +23,7 @@
             app:title="@string/app_name"
             android:minHeight="?attr/actionBarSize"
             android:layout_alignParentTop="true"
+            app:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             />
 
 
@@ -96,8 +96,9 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
         app:itemTextColor="@color/colorPrimaryDark"
+        app:itemIconTint="@color/text_color"
+        android:background="@color/colorWhite"
         android:layout_gravity="start"
         app:menu="@menu/navigation_menu"
         android:id="@+id/navigationView"
