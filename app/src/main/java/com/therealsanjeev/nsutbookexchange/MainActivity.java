@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -137,9 +138,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         });
                 AlertDialog alertDialog =builder.create();
                 alertDialog.show();
-
-
-
             default:
                 break;
         }
@@ -153,6 +151,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void openDrawer(){
         drawerLayout.openDrawer(GravityCompat.START);
     }
+
 
     @Override
     public void onBackPressed() {
@@ -180,5 +179,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 backAlreadyPressed = false;
             }
         }, 2000);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id=item.getItemId();
+        if(id==R.id.notify){
+            Toast.makeText(this,"Notification Clicked!",Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

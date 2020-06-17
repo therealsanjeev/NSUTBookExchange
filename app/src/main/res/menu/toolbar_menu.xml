@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:Context=".MainActivity">
+
+    <item android:id="@+id/notify"
+        android:title="Notifications"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        />
+    <item android:orderInCategory="200"
+        app:showAsAction="never"
+        android:title="Setting"
+        />
+    <item android:title="Share"
+        app:showAsAction="never"
+        android:orderInCategory="300"
+        />
+
+</menu>
