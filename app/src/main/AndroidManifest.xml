@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".buy.BookDetails"></activity>
+
+        <activity android:name=".buy.BookDetails"
+            android:parentActivityName=".buy.buy"></activity>
         <activity android:name=".homepage"></activity>
         <activity
             android:name=".login.RegisterActivity"
