@@ -17,6 +17,7 @@
 
         <activity android:name=".buy.BookDetails"
             android:parentActivityName=".buy.buy"></activity>
+
         <activity android:name=".homepage"></activity>
         <activity
             android:name=".login.RegisterActivity"
@@ -31,6 +32,8 @@
             android:name=".aboutUs"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
             android:name=".sell.sell"
             android:parentActivityName=".MainActivity" />
         <activity
