@@ -5,14 +5,15 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
-public class aboutUs extends AppCompatActivity {
+public class feedback extends AppCompatActivity {
+
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.about_us);
+        setContentView(R.layout.activity_feedback);
         toolbar=findViewById(R.id.toolBarOthers);
-        toolbar.setTitle("About");
+        toolbar.setTitle("Feedback");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

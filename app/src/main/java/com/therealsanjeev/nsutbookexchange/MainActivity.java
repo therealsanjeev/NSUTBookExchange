@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 final Intent sellIntent = new Intent(MainActivity.this, sell.class);
                 startActivity(sellIntent);
                 break;
+            case R.id.feedbackNav:
+                final Intent feedIntent = new Intent(MainActivity.this, feedback.class);
+                startActivity(feedIntent);
+                break;
             case R.id.aboutUs:
                 Intent aboutIntent=new Intent(MainActivity.this,aboutUs.class);
                 startActivity(aboutIntent);
