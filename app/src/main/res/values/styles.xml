@@ -13,7 +13,7 @@
 
 
     <style name="ProgressBar">
-        <item name="colorAccent">@color/toolBar</item>
+        <item name="colorAccent">@color/text_color</item>
     </style>
 
 

@@ -8,6 +8,17 @@
     tools:context=".buy.BookDetails">
 
     <include layout="@layout/toolbar_layout"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:elevation="6dp"
+        android:src="@drawable/bookcover"
+        android:layout_width="200dp"
+        android:layout_height="300dp"/>
+
+
 
 
 
