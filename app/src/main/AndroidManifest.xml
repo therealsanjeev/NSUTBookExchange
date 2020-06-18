@@ -15,7 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feedback"></activity>
+
+        <activity android:name=".chat.chatBox">
+
+        </activity>
+        <activity android:name=".chat.chatUsers"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".feedback" />
         <activity
             android:name=".buy.BookDetails"
             android:parentActivityName=".buy.buy" />

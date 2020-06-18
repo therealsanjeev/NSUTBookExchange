@@ -10,9 +10,12 @@
         android:orderInCategory="100"
         android:icon="@drawable/ic_baseline_notifications_24"
         />
-    <item android:orderInCategory="200"
-        app:showAsAction="never"
-        android:title="Setting"
+    <item
+        android:id="@+id/toolBarchats"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Chats"
         />
     <item android:title="Share"
         app:showAsAction="never"

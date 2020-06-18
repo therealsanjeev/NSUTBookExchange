@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/chattoolBar"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="6dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/login_photo"
+            android:id="@+id/chatProfileToolbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/chatUsernameToolbar"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:text="Sanjeev Gupta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

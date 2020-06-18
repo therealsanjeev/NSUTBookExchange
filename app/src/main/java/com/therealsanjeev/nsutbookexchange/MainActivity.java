@@ -24,6 +24,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.therealsanjeev.nsutbookexchange.buy.buy;
+import com.therealsanjeev.nsutbookexchange.chat.chatUsers;
 import com.therealsanjeev.nsutbookexchange.login.LoginActivity;
 import com.therealsanjeev.nsutbookexchange.sell.sell;
 
@@ -100,6 +101,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()){
+
+            case R.id.chatNav:
+                Intent chat=new Intent(MainActivity.this, chatUsers.class);
+                startActivity(chat);
+                break;
+
             case R.id.buy_menu:
                 Intent buyIntent=new Intent(MainActivity.this, buy.class);
                 startActivity(buyIntent);
@@ -130,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 FirebaseAuth.getInstance().signOut();
-                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                startActivity(new Intent(getApplicationContext(), homepage.class));
                                 finish();
                             }
                         })
@@ -197,6 +204,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id=item.getItemId();
         if(id==R.id.notify){
             Toast.makeText(this,"Notification Clicked!",Toast.LENGTH_SHORT).show();
+        }else if(id==R.id.toolBarchats){
+            Intent chat=new Intent(MainActivity.this, chatUsers.class);
+            startActivity(chat);
+
         }
         return super.onOptionsItemSelected(item);
     }

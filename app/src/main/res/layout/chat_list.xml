@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="16dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/login_photo"
+        android:id="@+id/chatProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <TextView
+        android:textSize="25dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/chatUserName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:text="Sanjeev Gupta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
