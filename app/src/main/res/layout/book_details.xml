@@ -8,6 +8,7 @@
     tools:context=".buy.BookDetails">
 
     <include layout="@layout/toolbar_layout"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"/>
@@ -15,11 +16,81 @@
     <ImageView
         android:elevation="6dp"
         android:src="@drawable/bookcover"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"/>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <TextView
+            android:textAllCaps="true"
+            android:textColor="@color/text_color"
+            android:id="@+id/tvBookNameDetails"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="@string/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textAllCaps="true"
+            android:textColor="@color/text_color"
+            android:id="@+id/tvAuthorNameDetails"
+            tools:text="@string/author_name"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/tvPriceDetails"
+            tools:text="@string/book_price"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Seller Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/text_color"
+                android:id="@+id/tvSellerNameDetails"
+                android:textSize="13sp"
+                tools:text="Name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/text_color"
+                android:id="@+id/tvSellerPhoneDetails"
+                android:textSize="13sp"
+                tools:text="Phone No"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/text_color"
+                android:id="@+id/tvSellerEmailDetails"
+                android:textSize="13sp"
+                tools:text="Email id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

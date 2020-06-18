@@ -57,7 +57,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             @Override
             public void onClick(View v) {
                 Intent i=  new Intent(context, BookDetails.class);
-                i.putExtra("user", String.valueOf(users.get(position)));
+                i.putExtra("book",users.get(position).getBook());
+                i.putExtra("auth",users.get(position).getAuthor());
+                i.putExtra("price",users.get(position).getPrice());
+                i.putExtra("seller",users.get(position).getSellerName());
+                i.putExtra("email",users.get(position).getSellerEmail());
+                i.putExtra("number",users.get(position).getSellerNo());
+
                 context.startActivity(i);
             }
         });
