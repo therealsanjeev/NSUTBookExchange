@@ -26,11 +26,9 @@ public class BookDetails extends AppCompatActivity {
             bookName.setText((String) bundle.get("book"));
             authName.setText((String)bundle.get("auth"));
             price.setText("₹"+(String)bundle.get("price"));
-            if(bundle.get("seller")!=null)
-//            name.setText((String)bundle.get("seller"));
+            name.setText((String)bundle.get("seller"));
             number.setText((String)bundle.get("number"));
             email.setText((String)bundle.get("email"));
-
         }
     }
 
@@ -39,7 +37,7 @@ public class BookDetails extends AppCompatActivity {
         bookName=findViewById(R.id.tvBookNameDetails);
         authName=findViewById(R.id.tvAuthorNameDetails);
         price=findViewById(R.id.tvPriceDetails);
-        name=findViewById(R.id.tvSellerName);
+        name=findViewById(R.id.tvSellerNameDetails);
         number=findViewById(R.id.tvSellerPhoneDetails);
         email=findViewById(R.id.tvSellerEmailDetails);
 
