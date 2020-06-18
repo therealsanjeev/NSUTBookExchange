@@ -74,15 +74,17 @@
                 android:id="@+id/tvSellerNameDetails"
                 android:textSize="18sp"
                 tools:text="Name"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:autoLink="phone"
+                android:linksClickable="true"
                 android:layout_marginBottom="5dp"
-                android:textColor="@color/text_color"
+                android:textColor="@color/numberColor"
                 android:id="@+id/tvSellerPhoneDetails"
                 android:textSize="18sp"
                 tools:text="Phone No"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:textColor="@color/text_color"
