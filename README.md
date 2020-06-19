@@ -2,7 +2,7 @@
 This is my first project, which i learned lot of things and also a big one:)
 
 Idea behind this app:
-Exchange Books in my college Netaji Subhas University of Technology, formerly Netaji Subhas Institute of Technology and Delhi Institute of Technology
+Exchange Books in my college(NSUT)
 
 #### CLICK HERE FOR DOWNLOAD 
 [NSUT BOOK EXCHANGE ApK](https://github.com/therealsanjeev/NSUTBookExchange/blob/master/NSUTBookEx.apk)
