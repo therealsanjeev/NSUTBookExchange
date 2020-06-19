@@ -56,6 +56,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final User user=users.get(position);
+
                 Intent i=  new Intent(context, BookDetails.class);
                 i.putExtra("book",users.get(position).getBook());
                 i.putExtra("auth",users.get(position).getAuthor());
@@ -63,6 +65,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 i.putExtra("seller",users.get(position).getSellerName());
                 i.putExtra("email",users.get(position).getSellerEmail());
                 i.putExtra("number",users.get(position).getSellerNo());
+                i.putExtra("userId",user.getId());
 
                 context.startActivity(i);
             }

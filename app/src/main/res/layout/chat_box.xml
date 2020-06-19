@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".chat.chatBox">
+
     <include layout="@layout/chat_toolbar"/>
+
+
 
 </LinearLayout>

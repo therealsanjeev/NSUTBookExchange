@@ -76,16 +76,16 @@
                 tools:text="Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <TextView
-                android:autoLink="phone"
-                android:linksClickable="true"
-                android:layout_marginBottom="5dp"
-                android:textColor="@color/numberColor"
-                android:id="@+id/tvSellerPhoneDetails"
-                android:textSize="18sp"
-                tools:text="Phone No"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+<!--            <TextView-->
+<!--                android:autoLink="phone"-->
+<!--                android:linksClickable="true"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:textColor="@color/numberColor"-->
+<!--                android:id="@+id/tvSellerPhoneDetails"-->
+<!--                android:textSize="18sp"-->
+<!--                tools:text="Phone No"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
             <TextView
                 android:textColor="@color/text_color"
                 android:id="@+id/tvSellerEmailDetails"
@@ -94,6 +94,59 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="200dp"
+            android:layout_height="38dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="19dp"
+            app:cardElevation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+
+                <RelativeLayout
+                    android:id="@+id/chatBtnDetailBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/gradient_button_4_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="CHAT"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/gradient_button_4_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/ic_baseline_chat_24" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

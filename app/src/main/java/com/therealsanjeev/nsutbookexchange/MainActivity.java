@@ -43,6 +43,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private boolean backAlreadyPressed = false;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        auth=FirebaseAuth.getInstance();
+        authUser=FirebaseAuth.getInstance().getCurrentUser();
+
+        if(authUser==null){
+            startActivity(new Intent(getApplicationContext(),homepage.class));
+            finish();
+        }
+    }
+
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnBuy = findViewById(R.id.btnBuy);
         btnSell = findViewById(R.id.btnSell);
 
-        auth=FirebaseAuth.getInstance();
-        authUser=FirebaseAuth.getInstance().getCurrentUser();
 
-        if(authUser==null){
-            startActivity(new Intent(getApplicationContext(),homepage.class));
-            finish();
-        }
 
 
         //navigation Bar:
