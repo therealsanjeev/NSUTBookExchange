@@ -11,7 +11,7 @@ public class feedback extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
+        setContentView(R.layout.feedback);
         toolbar=findViewById(R.id.toolBarOthers);
         toolbar.setTitle("Feedback");
         setSupportActionBar(toolbar);

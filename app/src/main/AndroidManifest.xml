@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".chat.chatUsers"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".feedback" />
+        <activity android:name=".feedback" android:parentActivityName=".MainActivity"/>
+
         <activity
             android:name=".buy.BookDetails"
             android:parentActivityName=".buy.buy" />

@@ -20,7 +20,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         authorName = itemView.findViewById(R.id.tvAuthorName);
         price = itemView.findViewById(R.id.tvPrice);
         sellerName =itemView.findViewById(R.id.tvSellerName);
-        sellerNo = itemView.findViewById(R.id.tvSellerPhone);
+//        sellerNo = itemView.findViewById(R.id.tvSellerPhone);
         sellerEmail = itemView.findViewById(R.id.tvSellerEmail);
     }
 }

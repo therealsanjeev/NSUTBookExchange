@@ -48,7 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         ((ViewHolder)holder).price.setText(users.get(position).getPrice());
         ((ViewHolder)holder).sellerName.setText(users.get(position).getSellerName());
         ((ViewHolder)holder).sellerEmail.setText(users.get(position).getSellerEmail());
-        ((ViewHolder)holder).sellerNo.setText(users.get(position).getSellerNo());
+//        ((ViewHolder)holder).sellerNo.setText(users.get(position).getSellerNo());
         setOnClick(((ViewHolder)holder).cardView,position);
     }
 
@@ -64,7 +64,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 i.putExtra("price",users.get(position).getPrice());
                 i.putExtra("seller",users.get(position).getSellerName());
                 i.putExtra("email",users.get(position).getSellerEmail());
-                i.putExtra("number",users.get(position).getSellerNo());
+//                i.putExtra("number",users.get(position).getSellerNo());
                 i.putExtra("userId",user.getId());
 
                 context.startActivity(i);
