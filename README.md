@@ -1,8 +1,8 @@
 # NSUTBookExchange ! 
-This is my first project, which i learned lot of things and also a big one:)
+This project for me really h, which i learned lot of things and also a big one:)
 
 Idea behind this app:
-Exchange Books in my college(NSUT)
+Exchange Books in my college (Netaji Subhas University of Technology) and connect junior and senior.
 
 Underprogress...
 #### CLICK HERE FOR DOWNLOAD 
@@ -13,8 +13,11 @@ Underprogress...
    a) Realtime Database
    b) Authentication
    c) cloud messaging
-2) RecyclerView
-3)Matrial Design
+   
+2) RecyclerView.
+
+3)Matrial Design.
+
 4)Glide(for photos)
 
 
