@@ -6,47 +6,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorWhite"
+
     tools:context=".aboutUs">
 
     <include layout="@layout/toolbar_layout"/>
-
-    <TextView
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="15dp"
-        android:textSize="30sp"
-        android:fontFamily="@font/insta_font"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/about_Description"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="10dp"
+            android:src="@drawable/aboutprofile"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
 
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:text="Developed by Sanjeev Gupta"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <Button
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:id="@+id/aboutBtn"
+            android:textColor="@color/colorWhite"
+            android:text="Instagram"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
 
-    <TextView
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/insta_font"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/email"
-        android:textSize="30sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    </LinearLayout>
 
-
-    <TextView
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/insta_font"
-        android:textColor="@color/colorPrimary"
-       android:text="\n\nTHANK YOU FOR SUPPORTING :)"
-        android:textSize="30sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:src="@drawable/happy"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
 
 
 </LinearLayout>

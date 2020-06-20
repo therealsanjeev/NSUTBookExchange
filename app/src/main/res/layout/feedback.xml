@@ -9,5 +9,38 @@
     tools:context=".feedback">
 
     <include layout="@layout/toolbar_layout"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/about_Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/email"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/insta_font"
+        android:textColor="@color/colorPrimary"
+        android:text="\n\nTHANK YOU FOR SUPPORTING :)"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/happy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
 </LinearLayout>

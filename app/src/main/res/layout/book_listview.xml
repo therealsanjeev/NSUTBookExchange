@@ -73,7 +73,7 @@
                     android:textColor="@color/text_color"
                     android:textSize="13sp"
                     android:layout_gravity="right"
-                    android:text="Email"
+                    android:text="Email:"
                     android:layout_width="0dp"
                     android:layout_weight="2"
                     android:layout_height="wrap_content"/>
