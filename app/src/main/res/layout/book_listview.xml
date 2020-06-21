@@ -10,14 +10,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
         card_view:cardBackgroundColor="#fff"
         card_view:cardCornerRadius="5dp"
         card_view:cardElevation="6dp"
-        android:padding="8dp"
+        android:layout_margin="8dp"
         android:id="@+id/cardView"
         card_view:cardUseCompatPadding="true">
         <LinearLayout
+            android:layout_margin="8dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -26,7 +26,6 @@
                 android:textAllCaps="true"
                 android:textColor="@color/text_color"
                 android:id="@+id/tvBookName"
-                android:layout_marginStart="10dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:text="@string/book_name"
@@ -35,7 +34,7 @@
             <TableRow
                 android:id="@+id/hr"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/text_color"/>
             <TextView
                 android:textColor="@color/text_color"
@@ -43,7 +42,6 @@
                 android:id="@+id/tvAuthorName"
                 tools:text="@string/author_name"
                 android:textSize="20sp"
-                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -51,7 +49,6 @@
                 android:id="@+id/tvPrice"
                 tools:text="@string/book_price"
                 android:textSize="16sp"
-                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -62,8 +59,6 @@
                 <TextView
                     android:textColor="@color/text_color"
                     android:textSize="13sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center_horizontal"
                     android:text="Name:"
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -72,7 +67,6 @@
                 <TextView
                     android:textColor="@color/text_color"
                     android:textSize="13sp"
-                    android:layout_gravity="right"
                     android:text="Email:"
                     android:layout_width="0dp"
                     android:layout_weight="2"
@@ -88,8 +82,6 @@
                     android:textColor="@color/text_color"
                     android:id="@+id/tvSellerName"
                     android:textSize="13sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="left"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
@@ -98,7 +90,6 @@
                     android:textColor="@color/text_color"
                     android:id="@+id/tvSellerEmail"
                     android:textSize="13sp"
-                    android:layout_gravity="right"
                     android:layout_width="0dp"
                     android:layout_weight="2"
                     android:layout_height="wrap_content"/>
