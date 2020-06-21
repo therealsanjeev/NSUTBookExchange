@@ -16,16 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".chat.chatBox">
-
-        </activity>
-        <activity android:name=".chat.chatUsers"
+        <activity android:name=".chat.chatBox"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".feedback" android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".chat.chatUsers"
+            android:parentActivityName=".chat.chatBox"/>
+
+        <activity android:name=".feedback"
+            android:parentActivityName=".MainActivity"/>
 
         <activity
             android:name=".buy.BookDetails"
             android:parentActivityName=".buy.buy" />
+
         <activity android:name=".homepage" />
         <activity
             android:name=".login.RegisterActivity"
@@ -43,9 +46,11 @@
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".buy.buy"
             android:parentActivityName=".MainActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

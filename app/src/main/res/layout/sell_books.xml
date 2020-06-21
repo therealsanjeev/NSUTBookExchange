@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,167 +8,211 @@
     android:background="@color/colorWhite"
     tools:context=".sell.sell">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar_layout"/>
 
 
-    <include layout="@layout/toolbar_layout"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="36.7dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
 
-        <!-- INPUT -->
-
-        <EditText
-            android:id="@+id/etBookName"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/book_name"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/colorPrimary"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:singleLine="true"
-            android:textColor="@color/colorTitle"
-            android:textCursorDrawable="@color/colorAccent"
-            android:textSize="14sp" />
-    </RelativeLayout>
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etAuthor"
+                <EditText
+                    android:id="@+id/etBookName"
+                    android:hint="@string/book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/author_name"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/colorTitle"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:singleLine="true"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+            android:layout_height="40dp"
+            android:layout_below="@+id/email_input_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etPrice"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etAuthor"
+                    android:hint="@string/author_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="e.g. 100₹"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/colorTitle"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:singleLine="true"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
-    </RelativeLayout>
+            android:layout_height="40dp"
+            android:layout_below="@+id/email_input_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etSellerName"
+                <EditText
+                    android:hint="e.g. 100₹"
+                    android:id="@+id/etPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/name"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:singleLine="true"
-            android:textColorHint="@color/colorTitle"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
-    </RelativeLayout>
+            android:layout_height="40dp"
+            android:layout_below="@+id/email_input_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etSellerEmail"
+                <EditText
+                    android:hint="@string/name"
+                    android:id="@+id/etSellerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/your_email_id"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/colorTitle"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etSellerNo"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:hint="@string/your_email_id"
+                    android:id="@+id/etSellerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/password_input_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/your_whatsapp_no"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:paddingLeft="17dp"
-            android:textColorHint="@color/colorTitle"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
-    </RelativeLayout>
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etSellerNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="@string/your_whatsapp_no"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
     <Button
@@ -181,5 +225,4 @@
         android:text="@string/request"
         android:textColor="#ffff" />
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>
