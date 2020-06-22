@@ -129,6 +129,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
+                    android:singleLine="true"
                     android:hint="@string/name"
                     android:id="@+id/etSellerName"
                     android:layout_width="match_parent"
@@ -162,6 +163,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
+                    android:singleLine="true"
                     android:hint="@string/your_email_id"
                     android:id="@+id/etSellerEmail"
                     android:layout_width="match_parent"

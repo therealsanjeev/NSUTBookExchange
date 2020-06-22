@@ -29,22 +29,25 @@ public class sell extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sell_books);
-
         toolbar=findViewById(R.id.toolBarOthers);
         toolbar.setTitle("Sell Books");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        setType();
+        addBook();
+
+    }
+
+    private void setType() {
         btnReq=findViewById(R.id.btnReq);
+
         etBookName=findViewById(R.id.etBookName);
         etAuthor=findViewById(R.id.etAuthor);
         etPrice=findViewById(R.id.etPrice);
         etSellerName=findViewById(R.id.etSellerName);
         etSellerNo=findViewById(R.id.etSellerNo);
         etSellerEmail=findViewById(R.id.etSellerEmail);
-
-        addBook();
-
     }
 
     private void addBook() {
