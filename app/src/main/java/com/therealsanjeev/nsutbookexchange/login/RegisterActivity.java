@@ -72,9 +72,11 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
                 if(!pass.toLowerCase().contains(passRe.toLowerCase())){
+
                     etRegPassRepeat.setError("Password Not Match.");
                     return;
                 }
+
 
                 regPro.setVisibility(View.VISIBLE);
 
