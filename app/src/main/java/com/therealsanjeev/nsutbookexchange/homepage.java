@@ -35,7 +35,6 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(homepage.this, RegisterActivity.class));
-                Toast.makeText(homepage.this,"Registration", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -45,7 +44,6 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(homepage.this, LoginActivity.class));
-                finish();
             }
         });
     }
