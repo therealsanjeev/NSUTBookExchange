@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ import com.therealsanjeev.nsutbookexchange.R;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText etRegEmail,etRegPass,etRegPassRepeat,etRegName,etRegPhone;
-    Button btnSignUp;
+    RelativeLayout btnSignUp;
     TextView tvSignUp;
     FirebaseAuth auth;
     FirebaseUser authUser;

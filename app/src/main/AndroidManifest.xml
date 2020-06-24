@@ -32,7 +32,9 @@
         <activity android:name=".homepage" />
         <activity
             android:name=".login.RegisterActivity"
-            android:noHistory="true" />
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".login.LoginActivity"
             android:noHistory="true"

@@ -23,8 +23,10 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="you_are_not_a_member_register">You are not a member? <b><font fgcolor='#3CDA85'>Register.</font></b></string>
     <string name="about_Description">If you facing any kind of problem \n or you have kind of suggestions to improve our app\n\n You can contact me :</string>
     <string name="email">MAIL ID@ :\ntherealsanjeev0@gmail.com\n[Sanjeev]</string>
+
+    <string name="you_are_not_a_member_register">You are not a member? <b><font fgcolor='#3CDA85'>Register</font></b></string>
+    <string name="already_have_account">"Already have account? <b><font fgcolor='#3CDA85'>Login</font></b></string>
 
 </resources>
