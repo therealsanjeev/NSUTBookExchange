@@ -79,6 +79,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/etRegEmail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -88,7 +89,6 @@
                     android:background="@null"
                     android:hint="@string/your_email_id"
                     android:imeOptions="actionDone"
-                    android:inputType="textPassword"
                     android:maxLines="1"
                     android:textColor="@color/colorTitle"
                     android:textSize="15dp"
@@ -104,6 +104,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
             app:cardBackgroundColor="@color/colorCardViewBackground"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp">
@@ -120,9 +121,9 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:background="@null"
-                    android:hint="@string/common_open_on_phone"
+                    android:hint="Phone No."
                     android:imeOptions="actionNext"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textColor="@color/colorTitle"
                     android:textSize="15dp"
@@ -133,10 +134,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/password_input_parent"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@+id/email_input_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
@@ -170,6 +169,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             app:cardBackgroundColor="@color/colorCardViewBackground"
@@ -188,9 +188,8 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:background="@null"
-                    android:hint="Email"
+                    android:hint="Confirm Password"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
                     android:maxLines="1"
                     android:textColor="@color/colorTitle"
                     android:textSize="15dp"
