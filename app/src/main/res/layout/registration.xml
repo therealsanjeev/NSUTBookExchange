@@ -19,149 +19,189 @@
         android:layout_marginLeft="40dp"
         />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/login_input_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="36.7dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+        android:layout_marginTop="30dp">
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etRegName"
+        <androidx.cardview.widget.CardView
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/name"
-            android:textColorHint="@color/colorTitle"
-            android:singleLine="true"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+                <EditText
+                    android:id="@+id/etRegName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etRegEmail"
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/prompt_email"
-            android:textColorHint="@color/colorTitle"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:paddingLeft="17dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+                <EditText
+                    android:id="@+id/etRegEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="@string/your_email_id"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etRegPhone"
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/email_input_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/your_whatsapp_no"
-            android:textColorHint="@color/colorTitle"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-            android:inputType="phone"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:singleLine="true"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@color/colorAccent"
-            android:textSize="14sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </RelativeLayout>
+                <EditText
+                    android:id="@+id/etRegPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="@string/common_open_on_phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
 
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+        </androidx.cardview.widget.CardView>
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etRegPass"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/password_input_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="@string/prompt_password"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColorHint="@color/colorTitle"
+            android:layout_height="40dp"
+            android:layout_below="@+id/email_input_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-            android:paddingLeft="17dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@color/colorAccent"
-            android:textSize="14sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </RelativeLayout>
+                <EditText
+                    android:id="@+id/etRegPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/blue_border_rounded_cornwe">
+            </RelativeLayout>
 
-        <!-- INPUT -->
-        <EditText
-            android:id="@+id/etRegPassRepeat"
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="Confirm Password"
-            android:textColorHint="@color/colorTitle"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="@color/colorCardViewBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
 
-            android:inputType="textPassword"
-            android:singleLine="true"
-            android:maxLines="1"
-            android:paddingLeft="17dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:textColor="@color/colorPrimary"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSize="14sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </RelativeLayout>
+                <EditText
+                    android:id="@+id/etRegPassRepeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="15dp"
+                    tools:ignore="TextFields" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnSignUp"
