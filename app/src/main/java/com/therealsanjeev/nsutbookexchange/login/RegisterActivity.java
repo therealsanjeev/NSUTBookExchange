@@ -96,6 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Welcome TO NSUT BOOK EXCHANGE", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             regPro.setVisibility(View.GONE);
+                            finish();
                         } else {
                             regPro.setVisibility(View.GONE);
                             Toast.makeText(RegisterActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
