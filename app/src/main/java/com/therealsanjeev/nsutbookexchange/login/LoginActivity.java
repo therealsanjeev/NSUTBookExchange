@@ -47,13 +47,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void setType() {
-//        loginPro=findViewById(R.id.loginPro);
+        loginPro=findViewById(R.id.loginPro);
         etLoginEmail = findViewById(R.id.email);
         etLoginPass = findViewById(R.id.password);
         btnLogin = findViewById(R.id.login_button);
         login_button_card_view = findViewById(R.id.login_button_card_view);
         auth = FirebaseAuth.getInstance();
-//        loginPro.setVisibility(View.GONE);
+        loginPro.setVisibility(View.INVISIBLE);
     }
 
     private void loginOnClick() {
@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-//                loginPro.setVisibility(View.VISIBLE);
+                loginPro.setVisibility(View.VISIBLE);
 
                 auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -84,9 +84,10 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "Welcome Back !", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            loginPro.setVisibility(View.GONE);
                         } else {
                             Toast.makeText(LoginActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
-//                            loginPro.setVisibility(View.GONE);
+                            loginPro.setVisibility(View.INVISIBLE);
                         }
                     }
                 });

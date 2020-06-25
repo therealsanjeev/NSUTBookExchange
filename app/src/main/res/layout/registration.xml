@@ -250,14 +250,17 @@
                 android:textStyle="bold"
                 />
             <ProgressBar
+                android:visibility="invisible"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/signUpText"
                 android:id="@+id/regPro"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/colorPrimary"
                 android:layout_width="25dp"
-                android:layout_height="25dp"/>
+                android:layout_height="25dp"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorWhite"/>
 
         </RelativeLayout>
 

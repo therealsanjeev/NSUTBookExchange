@@ -140,12 +140,12 @@
                     android:focusable="false">
 
                     <TextView
+                        android:id="@+id/loginText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:ellipsize="end"
                         android:lines="1"
                         android:text="Login"
@@ -153,6 +153,18 @@
                         android:textSize="18dp"
                         android:textStyle="bold"
                         />
+                    <ProgressBar
+                        android:visibility="invisible"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/loginText"
+                        android:id="@+id/loginPro"
+                        android:layout_gravity="center"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:indeterminate="true"
+                        android:indeterminateTintMode="src_atop"
+                        android:indeterminateTint="@color/colorWhite"/>
 
                 </RelativeLayout>
 
