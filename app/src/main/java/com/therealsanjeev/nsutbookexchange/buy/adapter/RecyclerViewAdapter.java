@@ -65,7 +65,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 i.putExtra("seller",users.get(position).getSellerName());
                 i.putExtra("email",users.get(position).getSellerEmail());
 //                i.putExtra("number",users.get(position).getSellerNo());
-                i.putExtra("userId",user.getId());
+//                i.putExtra("userId",user.getId());
 
                 context.startActivity(i);
             }

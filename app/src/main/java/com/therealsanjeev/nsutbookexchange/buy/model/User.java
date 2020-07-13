@@ -2,7 +2,6 @@ package com.therealsanjeev.nsutbookexchange.buy.model;
 
 public class User {
 
-    private String id;
     private String author;
     private String price;
     private String sellerName;
@@ -10,9 +9,6 @@ public class User {
     private String book;
     private String sellerEmail;
 
-    public String getId() {
-        return id;
-    }
     public String getBook() {
         return book;
     }
@@ -37,14 +33,14 @@ public class User {
         return sellerNo;
     }
 
-    public User(String book, String author, String price, String sellerName,String sellerEmail, String sellerNo,String id) {
+    public User(String book, String author, String price, String sellerName,String sellerEmail, String sellerNo) {
+
         this.book = book;
         this.author = author;
         this.price = price;
         this.sellerName = sellerName;
         this.sellerEmail=sellerEmail;
         this.sellerNo = sellerNo;
-        this.id=id;
     }
 
     public User() {
