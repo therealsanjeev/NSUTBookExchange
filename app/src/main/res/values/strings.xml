@@ -28,5 +28,6 @@
 
     <string name="you_are_not_a_member_register">You are not a member? <b><font fgcolor='#3CDA85'>Register</font></b></string>
     <string name="already_have_account">"Already have account? <b><font fgcolor='#3CDA85'>Login</font></b></string>
+    <string name="dashborad_quote">It always seems impossible until it’s done.</string>
 
 </resources>

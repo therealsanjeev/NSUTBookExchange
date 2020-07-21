@@ -55,6 +55,16 @@
             android:text="Nice to see you again!"
             android:textColor="@color/colorAccent"
             android:textSize="20dp" />
+        <TextView
+            android:textSize="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="-40dp"
+            android:layout_toRightOf="@id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:text="@string/dashborad_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_marginLeft="16dp"
