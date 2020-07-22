@@ -28,8 +28,8 @@ public class sell extends AppCompatActivity {
     FirebaseFirestore fs;
 
     //button & EditText
-    Button btnReq;
-    EditText etBookName,etAuthor,etPrice,etSellerName,etSellerNo,etSellerEmail;
+    private Button btnReq;
+    private EditText etBookName,etAuthor,etPrice,etSellerName,etSellerNo,etSellerEmail;
 
     Toolbar toolbar;
     @Override
@@ -82,7 +82,6 @@ public class sell extends AppCompatActivity {
     private void addBook(String book,String author,String price,String sellerName,String sellerEmail,String sellerNo) {
 
         String id= FirebaseAuth.getInstance().getCurrentUser().getUid();
-
 
         CollectionReference dc=fs.collection("Books").document(id).collection("request");
         User userData=new User(book,author,price,sellerName,sellerEmail,sellerNo);
