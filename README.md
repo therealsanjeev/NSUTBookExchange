@@ -1,24 +1,21 @@
-# NSUTBookExchange ! 
-This project for me really h, which i learned lot of things and also a big one:)
-
+# NSUTBookExchange ! :)
 Idea behind this app:
-Exchange Books in my college (Netaji Subhas University of Technology) and connect junior and senior.
+Exchange Books in my college with students and connect junior and senior.
+This app-based on java and firebase but now to improve this app performance i am working on Android architecture part. The architecture will help to boost the app the performance and makes user friendly.
 
 Underprogress...
 #### CLICK HERE FOR DOWNLOAD 
-[NSUT BOOK EXCHANGE ApK](https://drive.google.com/drive/folders/1xeQva4lcodiHzvQ5pb_KluVmFoRflxZq?usp=sharing)
+[NSUT BOOK EXCHANGE ApK](https://drive.google.com/drive/folders/1xeQva4lcodi HzvQ5pb_KluVmFoRflxZq?usp=sharing)
 
 ## tools used:
-1) Firebase
-   a) Realtime Database
-   b) Authentication
-   c) cloud messaging
+#### 1) Firebase
+##### a) Realtime Database
+##### b) Authentication
+##### c) cloud messaging
    
-2) RecyclerView.
-
-3)Matrial Design.
-
-4)Glide(for photos)
+#### 2) RecyclerView.
+#### 3)Matrial Design.
+#### 4)Glide(for photos)
 
 
 # ScreenShot
