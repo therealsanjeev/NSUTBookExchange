@@ -30,7 +30,7 @@ public class sell extends AppCompatActivity {
     //button & EditText
     private Button btnReq;
     private EditText etBookName,etAuthor,etPrice,etSellerName,etSellerNo,etSellerEmail;
-
+    private String book,author,price,sellerName,sellerNo,sellerEmail;
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,26 +45,23 @@ public class sell extends AppCompatActivity {
     }
 
     private void takeInput() {
-        final String book = etBookName.getText().toString();
-        final String author = etAuthor.getText().toString();
-        final String price = etPrice.getText().toString();
-        final String sellerName = etSellerName.getText().toString();
-        final String sellerNo = etSellerNo.getText().toString();
-        final String sellerEmail = etSellerEmail.getText().toString();
+        book = etBookName.getText().toString();
+        author = etAuthor.getText().toString();
+        price = etPrice.getText().toString();
+        sellerName = etSellerName.getText().toString();
+        sellerNo = etSellerNo.getText().toString();
+        sellerEmail = etSellerEmail.getText().toString();
 
         btnReq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //get input from user :
 
-
                 //add details on FireBase :
 //                DatabaseReference db =FirebaseDatabase.getInstance().getReference();
-                if(book.length()!=0&&author.length()!=0&&price.length()!=0&&sellerName.length()!=0&&sellerNo.length()==10){
-
-                    addBook(book,author,price,sellerName,sellerEmail,sellerNo);
-
-                }else if(book.length()!=0&&author.length()!=0&&price.length()!=0&&sellerName.length()!=0&&sellerNo.length()!=10){
+                if(!book.isEmpty()&&!author.isEmpty()&&!price.isEmpty()&&!sellerName.isEmpty()&& !sellerEmail.isEmpty()&&sellerNo.length()==10){
+                    addBook();
+                }else if(sellerNo.length()!=10){
                     Toast.makeText(sell.this,"Invalid Phone No.",Toast.LENGTH_LONG).show();
                 }
                 else{
@@ -79,7 +76,7 @@ public class sell extends AppCompatActivity {
 
 
 
-    private void addBook(String book,String author,String price,String sellerName,String sellerEmail,String sellerNo) {
+    private void addBook(){
 
         String id= FirebaseAuth.getInstance().getCurrentUser().getUid();
 
