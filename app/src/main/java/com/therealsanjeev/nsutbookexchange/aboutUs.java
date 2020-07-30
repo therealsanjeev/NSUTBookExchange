@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class aboutUs extends AppCompatActivity {
 
-    Button button;
+    Button btnIns,btnTwi;
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,11 @@ public class aboutUs extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        button=findViewById(R.id.aboutBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        btnIns=findViewById(R.id.aboutBtn);
+        btnIns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("http://instagram.com/therealsanjeev");
+                Uri uri = Uri.parse("https://instagram.com/therealsanjeev");
                 Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
 
                 likeIng.setPackage("com.instagram.android");
@@ -36,10 +36,26 @@ public class aboutUs extends AppCompatActivity {
                 try {
                     startActivity(likeIng);
                 } catch (ActivityNotFoundException e) {
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            Uri.parse("http://instagram.com/therealsanjeev")));
+                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                }
+            }
+        });
+        btnTwi=findViewById(R.id.aboutBtnTw);
+        btnTwi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://twitter.com/therealsanjeev");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.twitter.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
                 }
             }
         });
     }
+
 }

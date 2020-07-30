@@ -59,7 +59,7 @@ public class sell extends AppCompatActivity {
 
 
                 //add details on FireBase :
-                DatabaseReference db =FirebaseDatabase.getInstance().getReference();
+//                DatabaseReference db =FirebaseDatabase.getInstance().getReference();
                 if(book.length()!=0&&author.length()!=0&&price.length()!=0&&sellerName.length()!=0&&sellerNo.length()==10){
 
                     addBook(book,author,price,sellerName,sellerEmail,sellerNo);

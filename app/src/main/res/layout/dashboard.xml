@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="Welcome!"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="50dp"
+            android:textSize="48sp"
             android:fontFamily="sans-serif-medium"
             android:layout_marginTop="70dp"
             android:layout_marginLeft="16dp"
@@ -48,23 +48,23 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView"
+            android:layout_below="@+id/textView"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="16dp"
-            android:layout_marginBottom="-21dp"
-            android:text="Nice to see you again!"
+            android:text="@string/app_tagline"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp" />
+            android:textSize="16sp" />
+
         <TextView
-            android:textSize="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="-40dp"
-            android:layout_toRightOf="@id/textView2"
-            android:layout_alignBottom="@+id/textView2"
-            android:layout_alignParentLeft="true"
-            android:text="@string/dashborad_quote"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/textView2"
+            android:text="@string/dashborad_quote"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_marginLeft="16dp"
