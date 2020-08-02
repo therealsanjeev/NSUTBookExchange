@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,23 @@
     android:background="@color/colorWhite"
     tools:context=".sell.sell">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
         <include layout="@layout/toolbar_layout"/>
-    <TextView
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
         android:textColor="@color/text_color"
         android:textAllCaps="true"
         android:layout_margin="5dp"
@@ -19,7 +33,10 @@
         android:text="Sell your Book and Earn!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-        <androidx.cardview.widget.CardView
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/edit1"
+                android:layout_alignParentStart="true"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
@@ -44,17 +61,19 @@
                     android:background="@null"
                     android:imeOptions="actionDone"
                     android:maxLines="1"
+                    android:singleLine="true"
                     android:textColor="@color/colorTitle"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     tools:ignore="TextFields" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/edit1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@+id/email_input_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
@@ -67,6 +86,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
+                    android:singleLine="true"
                     android:id="@+id/etAuthor"
                     android:hint="@string/author_name"
                     android:layout_width="match_parent"
@@ -78,16 +98,16 @@
                     android:imeOptions="actionDone"
                     android:maxLines="1"
                     android:textColor="@color/colorTitle"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     tools:ignore="TextFields" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+
+            <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@+id/email_input_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
@@ -100,7 +120,7 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:hint="e.g. 100₹"
+                    android:hint="@string/rate"
                     android:id="@+id/etPrice"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -111,15 +131,17 @@
                     android:imeOptions="actionDone"
                     android:inputType="number"
                     android:maxLines="1"
+                    android:singleLine="true"
                     android:textColor="@color/colorTitle"
-                    android:textSize="15dp"
-                    tools:ignore="TextFields" />
+                    android:textSize="15sp"
+                    tools:ignore="TextFields"/>
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+
+            <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@+id/email_input_parent"
@@ -154,7 +176,8 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+
+            <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
@@ -181,14 +204,14 @@
                     android:imeOptions="actionDone"
                     android:maxLines="1"
                     android:textColor="@color/colorTitle"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     tools:ignore="TextFields" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/password_input_parent"
+
+            <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
@@ -214,16 +237,15 @@
                     android:imeOptions="actionDone"
                     android:inputType="number"
                     android:maxLines="1"
+                    android:singleLine="true"
                     android:textColor="@color/colorTitle"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     tools:ignore="TextFields" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-
-
-    <Button
+            <Button
         android:id="@+id/btnReq"
         android:layout_gravity="center_horizontal"
         android:layout_width="200sp"
@@ -232,5 +254,7 @@
         android:background="@drawable/btnback"
         android:text="@string/request"
         android:textColor="#ffff" />
+        </RelativeLayout>
+    </RelativeLayout>
 
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

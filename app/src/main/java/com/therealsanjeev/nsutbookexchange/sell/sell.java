@@ -57,6 +57,7 @@ public class sell extends AppCompatActivity {
             public void onClick(View v) {
                 //get input from user :
 
+
                 //add details on FireBase :
 //                DatabaseReference db =FirebaseDatabase.getInstance().getReference();
                 if(!book.isEmpty()&&!author.isEmpty()&&!price.isEmpty()&&!sellerName.isEmpty()&& !sellerEmail.isEmpty()&&sellerNo.length()==10){
